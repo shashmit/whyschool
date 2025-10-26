@@ -1,16 +1,134 @@
 ---
-
+import Layout from '../components/layout/Layout.astro';
+import HeroSection from '../components/sections/HeroSection.astro';
+import ProblemSection from '../components/sections/ProblemSection.astro';
+import SolutionSection from '../components/sections/SolutionSection.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout 
+  title="WhySchool - Bringing Real-World Clarity to Students Early"
+  description="Bridge the gap between classroom learning and real-world application. Help students move from curiosity → clarity → confidence through hands-on experience across technology, design, finance, and entrepreneurship."
+  currentPath="/"
+>
+  <HeroSection 
+    title="Bringing Real-World Clarity to Students Early"
+    subtitle="Bridge the gap between classroom learning and real-world application. Help students move from curiosity → clarity → confidence through hands-on experience."
+    ctaText="Get Started Today"
+    ctaLink="/contact"
+    backgroundImage="https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=diverse%20group%20of%20students%20working%20together%20on%20hands-on%20projects%20in%20modern%20classroom%20setting%20with%20technology%20design%20finance%20entrepreneurship%20elements%20bright%20natural%20lighting%20professional%20educational%20environment&image_size=landscape_16_9"
+  />
+  
+  <ProblemSection />
+  
+  <SolutionSection />
+  
+  <!-- Vision Section -->
+  <section class="relative py-16 lg:py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden" id="vision">
+ 
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="inline-flex items-center px-4 py-2 bg-emerald-500/20 border border-emerald-400/30 text-emerald-400 rounded-full text-sm font-medium mb-4">
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+        </svg>
+        Our Vision
+      </div>
+      <h3 class="text-3xl sm:text-4xl font-bold mb-8 text-white">
+        Bridging the Gap Between Learning and Living
+      </h3>
+      <div class="max-w-4xl mx-auto space-y-6 text-lg text-gray-300 leading-relaxed mb-12">
+        <p>
+          We're here to bridge that gap — to bring industry understanding and 
+          <strong class="text-white">real-world exposure</strong> into the school journey itself.
+        </p>
+        <p class="text-xl font-medium text-gray-200">
+          Our mission is simple: To help students experience different fields hands-on — 
+          so they can discover what truly excites them and understand the 
+          <strong class="text-orange-400">"why"</strong> behind it.
+        </p>
+      </div>
+      
+      <!-- Journey Visualization -->
+      <div class="relative">
+        <!-- Enhanced background organic shape with gradient overlay -->
+        <div class="absolute -inset-6 bg-gradient-to-tr from-purple-500/8 to-pink-500/6 rounded-[2.5rem] transform -rotate-1"></div>
+        <div class="relative bg-gradient-to-br from-gray-800/70 to-gray-900/60 backdrop-blur-sm rounded-3xl p-8 mb-12 shadow-2xl">
+          
+          <div class="relative">
+            <h4 class="text-2xl font-bold mb-8 text-white">The WhySchool Journey</h4>
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12">
+              <div class="text-center group">
+                <div class="relative">
+                  <div class="relative w-20 h-20 bg-gradient-to-br from-emerald-400/20 via-emerald-500/10 to-green-600/10 rounded-full flex items-center justify-center mx-auto mb-4 shadow-xl shadow-emerald-500/25">
+                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                  </div>
+                </div>
+                <h5 class="text-xl font-semibold mb-2 text-white">Curiosity</h5>
+                <p class="text-gray-300">Natural interest in multiple fields</p>
+              </div>
+              
+              <div class="hidden md:block">
+                <svg class="w-12 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </div>
+              
+              <div class="text-center group">
+                <div class="relative">
+                  <div class="absolute -inset-2 bg-gradient-to-br from-sky-400/30 to-cyan-500/20 rounded-full blur-lg"></div>
+                  <div class="relative w-20 h-20 bg-gradient-to-br from-sky-400/30 via-sky-500/20 to-cyan-600/10 rounded-full flex items-center justify-center mx-auto mb-4 shadow-xl shadow-sky-500/25">
+                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                    </svg>
+                  </div>
+                </div>
+                <h5 class="text-xl font-semibold mb-2 text-white">Clarity</h5>
+                <p class="text-gray-300">Understanding through hands-on experience</p>
+              </div>
+              
+              <div class="hidden md:block">
+                <svg class="w-12 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </div>
+              
+              <div class="text-center group">
+                <div class="relative">
+                  <div class="absolute -inset-2 bg-gradient-to-br from-orange-400/30 to-emerald-400/20 rounded-full blur-lg"></div>
+                  <div class="relative w-20 h-20 bg-gradient-to-br from-orange-400/10 via-orange-500/20 to-emerald-500/10 rounded-full flex items-center justify-center mx-auto mb-4 shadow-xl shadow-orange-500/25">
+                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                </div>
+                <h5 class="text-xl font-semibold mb-2 text-white">Confidence</h5>
+                <p class="text-gray-300">Informed decisions about the future</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+     
+    </div>
+  </section>
+
+  <style>
+    @keyframes spin-slow {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    
+    .animate-spin-slow {
+      animation: spin-slow 8s linear infinite;
+    }
+  </style>
+</Layout>
