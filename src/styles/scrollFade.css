@@ -1,0 +1,83 @@
+/* Scroll Fade Animation Styles */
+
+.scroll-fade-element {
+  --scroll-opacity: 1;
+  opacity: var(--scroll-opacity);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+/* Fade in animation */
+.scroll-fade-in {
+  opacity: var(--scroll-opacity);
+  transform: translateY(0);
+}
+
+/* Fade out animation */
+.scroll-fade-out {
+  opacity: var(--scroll-opacity);
+  transform: translateY(-10px);
+}
+
+/* Enhanced transitions for different screen sizes */
+@media (max-width: 768px) {
+  .scroll-fade-element {
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  }
+  
+  .scroll-fade-out {
+    transform: translateY(-5px);
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-fade-element {
+    transition: opacity 0.3s ease;
+  }
+  
+  .scroll-fade-out {
+    transform: none;
+  }
+}
+
+/* Performance optimizations */
+.scroll-fade-element {
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Additional fade effects for nested elements */
+.scroll-fade-element .hero-content-animate,
+.scroll-fade-element .hero-visual-animate {
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: inherit;
+}
+
+/* Ensure text remains readable during fade */
+.scroll-fade-element h1,
+.scroll-fade-element h2,
+.scroll-fade-element h3,
+.scroll-fade-element p {
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Special handling for hero section */
+.scroll-fade-element.hero-section {
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-fade-element.hero-section.scroll-fade-out {
+  transform: translateY(-20px) scale(0.98);
+}
+
+/* Stagger animation for section content */
+.scroll-fade-element .animate-stagger > * {
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: calc(var(--stagger-delay, 0) * 0.1s);
+}
