@@ -13,6 +13,7 @@
     "@astrojs/tailwind": "^6.0.2",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
+    "@vercel/speed-insights": "^1.2.0",
     "astro": "^5.15.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
