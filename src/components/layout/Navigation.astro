@@ -2,26 +2,26 @@
 <header id="floating-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out opacity-0 translate-y-[-100%] pointer-events-none">
   <div class="mx-4 sm:mx-6 lg:mx-8 mt-4">
     <div class="max-w-4xl mx-auto">
-      <nav class="bg-gray-800/80 backdrop-blur-md shadow-2xl border border-gray-700/50 rounded-full px-6 py-3">
+      <nav class="bg-white/90 backdrop-blur-md shadow-2xl border border-gray-200 rounded-full px-6 py-3">
         <div class="flex justify-between items-center">
           <div class="flex items-center">
-            <a href="/" class="flex items-baseline hover:text-emerald-300 transition-colors duration-200">
-              <span class="text-lg sm:text-xl font-bold text-gray-100 select-none">WhyS</span>
-              <span class="text-lg sm:text-xl font-bold text-orange-400 select-none transform scale-x-[-1] translate-y-1">?</span>
-              <span class="text-lg sm:text-xl font-bold text-gray-100 select-none">hool</span>
+            <a href="/" class="flex items-baseline hover:text-green-600 transition-colors duration-200">
+              <span class="text-lg sm:text-xl font-bold text-black select-none">WhyS</span>
+              <span class="text-lg sm:text-xl font-bold text-orange-600 select-none transform scale-x-[-1] translate-y-1">?</span>
+              <span class="text-lg sm:text-xl font-bold text-black select-none">hool</span>
             </a>
           </div>
           
           <!-- Desktop Navigation -->
           <div class="hidden md:flex items-center space-x-8">
-            <a href="#vision" class="text-gray-300 hover:text-emerald-400 transition-colors duration-200 text-sm font-medium">
+            <a href="#vision" class="text-gray-700 hover:text-green-600 transition-colors duration-200 text-sm font-medium">
               Vision
             </a>
           </div>
           
           <!-- Mobile Menu Button -->
           <div class="md:hidden">
-            <button type="button" class="text-gray-300 hover:text-emerald-400 focus:outline-none focus:text-emerald-400 transition-colors duration-200" id="mobile-menu-button">
+            <button type="button" class="text-gray-700 hover:text-green-600 focus:outline-none focus:text-green-600 transition-colors duration-200" id="mobile-menu-button">
               <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
@@ -30,9 +30,9 @@
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-gray-700/50">
+        <div id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-gray-200/50">
           <div class="flex flex-col space-y-3">
-            <a href="#vision" class="text-gray-300 hover:text-emerald-400 transition-colors duration-200 text-sm font-medium">
+            <a href="#vision" class="text-gray-700 hover:text-green-600 transition-colors duration-200 text-sm font-medium">
               Vision
             </a>
           </div>
@@ -129,12 +129,12 @@
 <style>
   /* Enhanced glassmorphism effect */
   #floating-header nav {
-    background: rgba(31, 41, 55, 0.8);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     box-shadow: 
-      0 8px 32px rgba(0, 0, 0, 0.3),
-      0 0 0 1px rgba(255, 255, 255, 0.1);
+      0 8px 32px rgba(0, 0, 0, 0.1),
+      0 0 0 1px rgba(0, 0, 0, 0.05);
   }
   
   /* Smooth transitions for all interactive elements */
@@ -146,8 +146,8 @@
   /* Enhanced hover effects */
   #floating-header nav:hover {
     box-shadow: 
-      0 12px 40px rgba(0, 0, 0, 0.4),
-      0 0 0 1px rgba(255, 255, 255, 0.15);
+      0 12px 40px rgba(0, 0, 0, 0.15),
+      0 0 0 1px rgba(0, 0, 0, 0.08);
   }
   
   /* Mobile menu animations */

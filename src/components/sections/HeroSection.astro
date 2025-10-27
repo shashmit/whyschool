@@ -10,7 +10,7 @@ export interface Props {
 const { title, subtitle, ctaText, ctaLink, backgroundImage } = Astro.props;
 ---
 
-<section class="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-100 overflow-hidden min-h-screen flex items-start sm:items-center pt-16 pb-28 sm:pb-32 hero-section" data-scroll-fade>
+<section class="relative bg-gradient-to-br from-stone-50 via-white to-stone-100 text-gray-900 overflow-hidden min-h-screen flex items-start sm:items-center pt-8 pb-28 sm:pb-32 hero-section" data-scroll-fade>
   <!-- Organic Background Shapes with Parallax -->
 
   <!-- Content with proper centering -->
@@ -18,102 +18,106 @@ const { title, subtitle, ctaText, ctaLink, backgroundImage } = Astro.props;
     <!-- Stylized WhySchool Title -->
     <div class="text-center mb-10 md:mb-4">
       <div class="flex items-baseline justify-center">
-        <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-gray-700 opacity-60 select-none">
+        <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-gray-300 opacity-60 select-none">
           WhyS
         </h1>
-        <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-gray-700 opacity-60 select-none transform scale-x-[-1] translate-y-4 md:translate-y-10">
+        <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-orange-400 opacity-80 select-none transform scale-x-[-1] translate-y-4 md:translate-y-10">
           ?
         </h1>
-        <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-gray-700 opacity-60 select-none">
+        <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-gray-300 opacity-60 select-none">
           hool
         </h1>
       </div>
     </div>
     
-    <div class="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-center lg:min-h-[80vh]">
-      <!-- Left Content with entrance animations -->
-      <div class="space-y-6 lg:space-y-8 z-10 hero-content-animate text-center lg:text-left">
-        <!-- Small tag with entrance delay -->
-        <div class="inline-flex items-center px-4 py-2 bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 rounded-full text-sm font-medium hero-tag-animate">
-          <svg class="w-4 h-4 mr-2 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-          </svg>
-          Educational Innovation
-        </div>
-        
-        <!-- Main title with staggered animation -->
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-white hero-title-animate">
-          {title}
-        </h1>
-        
-        <!-- Subtitle with final delay -->
-        <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 hero-subtitle-animate">
-          {subtitle}
-        </p>
+    <div class="flex flex-col items-center gap-8 lg:gap-16 lg:min-h-[80vh]">
+      <!-- Small tag with entrance delay -->
+      <div class="inline-flex items-center px-4 py-2 bg-green-100 text-green-700 border border-green-300 rounded-full text-sm font-medium hero-tag-animate mt-4">
+        <svg class="w-4 h-4 mr-2 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+        Educational Innovation
       </div>
       
-      <!-- Visual Element with enhanced animations - Now responsive -->
-      <div class="relative hero-visual-animate w-full max-w-md mx-auto lg:max-w-none lg:mx-0 mt-8 lg:mt-0 pb-8 sm:pb-0">
+      <!-- Visual Element with enhanced animations - Now centered -->
+      <div class="relative hero-visual-animate w-full max-w-2xl mx-auto mt-8 pb-8 sm:pb-0">
         <div class="relative">
           <!-- Main floating card with enhanced hover effects - Mobile optimized -->
           <div class="relative animate-float-card">
             <!-- Large organic shape background with rotation - Hidden on mobile for performance -->
-            <div class="hidden lg:block absolute -inset-8 bg-gradient-to-br from-emerald-500/20 to-sky-500/15 rounded-[3rem] transform rotate-3 animate-rotate-gentle"></div>
+            <div class="hidden lg:block absolute -inset-8 bg-gradient-to-br from-green-100/40 to-orange-100/30 rounded-[3rem] transform rotate-3 animate-rotate-gentle"></div>
             
             <!-- Main content card with enhanced interactions - Mobile optimized -->
-            <div class="relative bg-gray-800/80 backdrop-blur-sm rounded-2xl lg:rounded-3xl p-4 sm:p-6 lg:p-8 shadow-2xl border border-gray-700/50 transform ">
-              <div class="flex items-start justify-between mb-4 lg:mb-6">
-                <div class="flex items-center space-x-2 lg:space-x-3">
-                  <div class="w-8 h-8 lg:w-12 lg:h-12 bg-gradient-to-br from-emerald-500/20 to-green-600/15 rounded-xl lg:rounded-2xl flex items-center justify-center">
-                    <svg class="w-4 h-4 lg:w-6 lg:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                    </svg>
+            <div class="relative bg-white/90 backdrop-blur-sm rounded-2xl lg:rounded-3xl p-4 sm:p-6 lg:p-8 shadow-2xl border border-gray-200 transform ">
+              <!-- Video Container -->
+              <div class="relative mb-4 lg:mb-6 rounded-xl lg:rounded-2xl overflow-hidden">
+                <video 
+                  id="hero-video"
+                  class="w-full h-48 sm:h-56 lg:h-80 object-cover rounded-xl lg:rounded-2xl"
+                  autoplay 
+                  muted
+                  loop
+                  playsinline
+                >
+                  <source src="/src/assets/The_Importance_of_Why_in_Education.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                
+                <!-- Mute/Unmute Button -->
+                <button 
+                  id="mute-toggle"
+                  class="absolute top-3 right-3 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200 backdrop-blur-sm"
+                  aria-label="Toggle mute"
+                >
+                  <svg id="mute-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" clip-rule="evenodd"/>
+                    <path id="mute-slash" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"/>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Main title positioned below video -->
+              <div class="text-center mb-4 lg:mb-6">
+                <h1 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight text-black hero-title-animate">
+                  {title}
+                </h1>
+              </div>
+
+              <!-- Card Content (initially hidden, shown after video) -->
+              <div id="card-content" class="opacity-100 transition-opacity duration-500">
+              
+                <!-- Progress indicator with animation -->
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center space-x-2">
+                    <div class="w-6 h-6 lg:w-8 lg:h-8 bg-green-100 border border-green-300 rounded-full flex items-center justify-center">
+                      <svg class="w-3 h-3 lg:w-4 lg:h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <span class="text-xs lg:text-sm font-medium text-gray-700">78% Complete</span>
                   </div>
-                  <div>
-                    <h3 class="text-sm lg:text-base font-bold text-white">Strategic → Educational</h3>
-                    <p class="text-xs lg:text-sm text-gray-400">Career Guidance</p>
-                  </div>
+                  <div class="text-xs lg:text-sm text-orange-500 font-medium">Career Clarity</div>
                 </div>
-              
               </div>
-              
-              <h4 class="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-3 lg:mb-4">Building a <span class="text-orange-400">Learning</span> Future</h4>
-              
-              <p class="text-sm lg:text-base text-gray-300 mb-4 lg:mb-6 leading-relaxed">
-                In this program, we explore the evolution of career paths and the learning process. From traditional classroom settings to hands-on experience, discover how these programs are streamlining education.
-              </p>
-              
-              <!-- Progress indicator with animation -->
-              <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-2">
-                  <div class="w-6 h-6 lg:w-8 lg:h-8 bg-emerald-500/20 border border-emerald-500/30 rounded-full flex items-center justify-center">
-                    <svg class="w-3 h-3 lg:w-4 lg:h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <span class="text-xs lg:text-sm font-medium text-gray-300">78% Complete</span>
-                </div>
-                <div class="text-xs lg:text-sm text-orange-400 font-medium">Career Clarity</div>
-              </div>
-              </div>
+            </div>
             </div>
           </div>
           
           <!-- Enhanced smaller floating cards - Mobile optimized -->
           <div class="relative animate-float-card-small animation-delay-1000">
             <!-- Background shape for first floating card -->
-            <div class="hidden lg:block absolute -inset-4 bg-gradient-to-br from-sky-500/15 to-cyan-500/10 rounded-[2rem] transform rotate-6 animate-rotate-gentle"></div>
+            <div class="hidden lg:block absolute -inset-4 bg-gradient-to-br from-orange-100/30 to-green-100/20 rounded-[2rem] transform rotate-6 animate-rotate-gentle"></div>
             
-            <div class="absolute top-2 -right-2 lg:-top-4 lg:-right-4 bg-gray-800/90 backdrop-blur-sm rounded-xl lg:rounded-2xl p-2 lg:p-4 shadow-lg border border-gray-700/50 transform rotate-6 lg:rotate-12 hover:rotate-3 lg:hover:rotate-6 hover:scale-110 transition-all duration-500">
+            <div class="absolute top-2 -right-2 lg:-top-4 lg:-right-4 bg-white/95 backdrop-blur-sm rounded-xl lg:rounded-2xl p-2 lg:p-4 shadow-lg border border-gray-200 transform rotate-6 lg:rotate-12 hover:rotate-3 lg:hover:rotate-6 hover:scale-110 transition-all duration-500">
               <div class="flex items-center space-x-1 lg:space-x-2">
-                <div class="w-6 h-6 lg:w-8 lg:h-8 bg-gradient-to-br from-sky-400/20 to-cyan-500 rounded-md lg:rounded-lg flex items-center justify-center">
-                  <svg class="w-3 h-3 lg:w-4 lg:h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="w-6 h-6 lg:w-8 lg:h-8 bg-gradient-to-br from-green-100 to-green-200 rounded-md lg:rounded-lg flex items-center justify-center">
+                  <svg class="w-3 h-3 lg:w-4 lg:h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                   </svg>
                 </div>
                 <div class="hidden sm:block">
-                  <div class="text-xs font-semibold text-white">Curiosity</div>
-                  <div class="text-xs text-gray-400">Explore</div>
+                  <div class="text-xs font-semibold text-black">Curiosity</div>
+                  <div class="text-xs text-gray-600">Explore</div>
                 </div>
               </div>
             </div>
@@ -121,18 +125,18 @@ const { title, subtitle, ctaText, ctaLink, backgroundImage } = Astro.props;
           
           <div class="relative animate-float-card-small animation-delay-1200">
             <!-- Background shape for second floating card -->
-            <div class="hidden lg:block absolute -inset-4 bg-gradient-to-br from-orange-500/15 to-red-500/10 rounded-[2rem] transform -rotate-3 animate-rotate-gentle"></div>
+            <div class="hidden lg:block absolute -inset-4 bg-gradient-to-br from-orange-100/30 to-green-100/20 rounded-[2rem] transform -rotate-3 animate-rotate-gentle"></div>
             
-            <div class="absolute -bottom-3 -left-3 lg:bottom-80 lg:-left-6 bg-gray-800/90 backdrop-blur-sm rounded-xl lg:rounded-2xl p-2 lg:p-4 shadow-lg border border-gray-700/50 transform -rotate-3 lg:-rotate-6 hover:rotate-0 hover:scale-110 transition-all duration-500">
+            <div class="absolute -bottom-3 -left-3 lg:bottom-60 lg:-left-6 bg-white/95 backdrop-blur-sm rounded-xl lg:rounded-2xl p-2 lg:p-4 shadow-lg border border-gray-200 transform -rotate-3 lg:-rotate-6 hover:rotate-0 hover:scale-110 transition-all duration-500">
               <div class="flex items-center space-x-1 lg:space-x-2">
-                <div class="w-6 h-6 lg:w-8 lg:h-8 bg-gradient-to-br from-orange-400 to-orange-500/15 rounded-md lg:rounded-lg flex items-center justify-center">
-                  <svg class="w-3 h-3 lg:w-4 lg:h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="w-6 h-6 lg:w-8 lg:h-8 bg-gradient-to-br from-orange-100 to-orange-200 rounded-md lg:rounded-lg flex items-center justify-center">
+                  <svg class="w-3 h-3 lg:w-4 lg:h-4 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
                 <div class="hidden sm:block">
-                  <div class="text-xs font-semibold text-white">Confidence</div>
-                  <div class="text-xs text-gray-400">Achieve</div>
+                  <div class="text-xs font-semibold text-black">Confidence</div>
+                  <div class="text-xs text-gray-600">Achieve</div>
                 </div>
               </div>
             </div>
@@ -140,7 +144,7 @@ const { title, subtitle, ctaText, ctaLink, backgroundImage } = Astro.props;
           
           <!-- Enhanced decorative geometric shape - Mobile optimized -->
           <div class="hidden lg:block absolute top-1/2 right-0 transform translate-x-8 animate-float-geometric">
-            <div class="w-16 h-16 bg-gradient-to-br from-sky-500/20 to-emerald-500/15 rounded-2xl transform rotate-45 animate-rotate-gentle"></div>
+            <div class="w-16 h-16 bg-gradient-to-br from-green-100/40 to-orange-100/30 rounded-2xl transform rotate-45 animate-rotate-gentle"></div>
           </div>
         </div>
       </div>
@@ -149,8 +153,8 @@ const { title, subtitle, ctaText, ctaLink, backgroundImage } = Astro.props;
   
   <!-- Enhanced Scroll Indicator -->
   <div class="absolute bottom-20 left-1/2 transform -translate-x-1/2 animate-bounce-gentle">
-    <div class="w-6 h-10 border-2 border-gray-500 rounded-full flex justify-center hero-scroll-animate">
-      <div class="w-1 h-3 bg-emerald-400 rounded-full mt-2 animate-scroll-indicator"></div>
+    <div class="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center hero-scroll-animate">
+      <div class="w-1 h-3 bg-green-500 rounded-full mt-2 animate-scroll-indicator"></div>
     </div>
   </div>
 </section>
@@ -321,3 +325,32 @@ const { title, subtitle, ctaText, ctaLink, backgroundImage } = Astro.props;
     }
   }
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const video = document.getElementById('hero-video');
+    const muteToggle = document.getElementById('mute-toggle');
+    const muteIcon = document.getElementById('mute-icon');
+    const muteSlash = document.getElementById('mute-slash');
+    
+    if (video && muteToggle && muteIcon && muteSlash) {
+      // Update icon based on current mute state
+      function updateMuteIcon() {
+        if (video.muted) {
+          muteSlash.style.display = 'block';
+        } else {
+          muteSlash.style.display = 'none';
+        }
+      }
+      
+      // Initialize icon state
+      updateMuteIcon();
+      
+      // Toggle mute on button click
+      muteToggle.addEventListener('click', function() {
+        video.muted = !video.muted;
+        updateMuteIcon();
+      });
+    }
+  });
+</script>

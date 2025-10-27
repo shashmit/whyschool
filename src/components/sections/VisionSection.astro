@@ -2,107 +2,499 @@
 // VisionSection component
 ---
 
-<section class="relative py-16 lg:py-24 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden" id="vision" data-scroll-fade>
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <div class="inline-flex items-center px-4 py-2 bg-emerald-500/20 border border-emerald-400/30 text-emerald-400 rounded-full text-sm font-medium mb-4">
-      <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-      </svg>
-      Our Vision
-    </div>
-    <h3 class="text-3xl sm:text-4xl font-bold mb-8 text-white">
-      Bridging the Gap Between Learning and Living
-    </h3>
-    <div class="max-w-4xl mx-auto space-y-6 text-lg text-gray-300 leading-relaxed mb-12">
-      <p>
-        We're here to bridge that gap — to bring industry understanding and 
-        <strong class="text-white">real-world exposure</strong> into the school journey itself.
-      </p>
-      <p class="text-xl font-medium text-gray-200">
-        Our mission is simple: To help students experience different fields hands-on — 
-        so they can discover what truly excites them and understand the 
-        <strong class="text-orange-400">"why"</strong> behind it.
-      </p>
-    </div>
-    
-    <!-- Journey Visualization -->
-    <div class="relative">
-      <!-- Enhanced background organic shape with gradient overlay -->
-      <div class="absolute -inset-6 bg-gradient-to-tr from-purple-500/8 to-pink-500/6 rounded-[2.5rem] transform -rotate-1"></div>
-      <div class="relative bg-gradient-to-br from-gray-800/70 to-gray-900/60 backdrop-blur-sm rounded-3xl p-8 mb-12 shadow-2xl">
+<!-- Sticky Scroll Container -->
+<div class="sticky-scroll-container">
+  <!-- Unified Vision Section -->
+  <section class="journey-section sticky-section" id="vision" data-journey-animation>
+    <div class="sticky-content">
+      <!-- Header Content -->
+      <div class="journey-header-content absolute top-24 left-1/2 transform -translate-x-1/2 z-20 text-center">
+        <div class="inline-flex items-center px-4 py-2 bg-green-100 border border-green-300 text-green-700 rounded-full text-sm font-medium mb-4">
+          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+          </svg>
+          Journey
+        </div>
+        <h3 class="text-3xl sm:text-4xl font-bold mb-8 text-black">
+          Bridging the Gap Between Learning and Living
+        </h3>
+      </div>
+      
+      <div class="journey-viewport mt-10">
         
-        <div class="relative">
-          <h4 class="text-2xl font-bold mb-8 text-white">The WhySchool Journey</h4>
-          <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12">
-            <div class="text-center group">
-              <div class="relative">
-                <div class="relative w-20 h-20 bg-gradient-to-br from-emerald-400/20 via-emerald-500/10 to-green-600/10 rounded-full flex items-center justify-center mx-auto mb-4 shadow-xl shadow-emerald-500/25">
-                  <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                  </svg>
-                </div>
-              </div>
-              <h5 class="text-xl font-semibold mb-2 text-white">Curiosity</h5>
-              <p class="text-gray-300">Natural interest in multiple fields</p>
+        <!-- Journey Steps - Horizontal Layout -->
+        <div class="journey-track" id="journey-track">
+          
+          <!-- Curiosity Step -->
+          <div class="journey-step text-center group relative" data-step="1">
+            <div class="relative w-64 h-64 mx-auto mb-8 rounded-3xl overflow-hidden shadow-2xl shadow-green-500/30  backdrop-blur-sm group-hover:shadow-green-500/50 transition-all duration-300">
+              <div class="absolute inset-0 bg-gradient-to-br from-green-100/80 via-green-200/60 to-green-300/40 group-hover:from-green-200/90 group-hover:via-green-300/70 group-hover:to-green-400/50 transition-all duration-300"></div>
+              <img 
+                src="/src/assets/images/curiosity.png" 
+                alt="Curiosity" 
+                class="relative z-10 w-full h-full object-cover rounded-2xl group-hover:scale-110 transition-transform duration-300"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-green-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
-            
-            <div class="hidden md:block">
-              <svg class="w-12 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
+            <div class="absolute -top-2 -right-2 w-12 h-12 bg-green-500 rounded-full flex items-center justify-center step-number">
+              <span class="text-white text-lg font-bold">1</span>
             </div>
-            
-            <div class="text-center group">
-              <div class="relative">
-                <div class="absolute -inset-2 bg-gradient-to-br from-sky-400/30 to-cyan-500/20 rounded-full blur-lg"></div>
-                <div class="relative w-20 h-20 bg-gradient-to-br from-sky-400/30 via-sky-500/20 to-cyan-600/10 rounded-full flex items-center justify-center mx-auto mb-4 shadow-xl shadow-sky-500/25">
-                  <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                  </svg>
-                </div>
-              </div>
-              <h5 class="text-xl font-semibold mb-2 text-white">Clarity</h5>
-              <p class="text-gray-300">Understanding through hands-on experience</p>
+            <h5 class="text-4xl font-semibold mb-6 text-black group-hover:text-green-600 transition-colors duration-300">Curiosity</h5>
+            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300 text-lg max-w-md mx-auto">Discover what truly interests you through exploration and questioning</p>
+          </div>
+          
+          <!-- Arrow 1 to 2 -->
+          <div class="journey-arrow" data-arrow="1">
+            <svg class="arrow-svg" viewBox="0 0 100 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 10 L85 10 M80 5 L85 10 L80 15" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          
+          <!-- Clarity Step -->
+          <div class="journey-step text-center group relative" data-step="2">
+            <div class="relative w-64 h-64 mx-auto mb-8 rounded-3xl overflow-hidden shadow-2xl shadow-orange-500/30 backdrop-blur-sm group-hover:shadow-orange-500/50 transition-all duration-300">
+              <div class="absolute inset-0 bg-gradient-to-br from-orange-100/80 via-orange-200/60 to-orange-300/40 group-hover:from-orange-200/90 group-hover:via-orange-300/70 group-hover:to-orange-400/50 transition-all duration-300"></div>
+              <img 
+                src="/src/assets/images/clarity.png" 
+                alt="Clarity" 
+                class="relative z-10 w-full h-full object-cover rounded-2xl group-hover:scale-110 transition-transform duration-300"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-orange-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
-            
-            <div class="hidden md:block">
-              <svg class="w-12 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
+            <div class="absolute -top-2 -right-2 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center step-number">
+              <span class="text-white text-lg font-bold">2</span>
             </div>
-            
-            <div class="text-center group">
-              <div class="relative">
-                <div class="absolute -inset-2 bg-gradient-to-br from-orange-400/30 to-emerald-400/20 rounded-full blur-lg"></div>
-                <div class="relative w-20 h-20 bg-gradient-to-br from-orange-400/10 via-orange-500/20 to-emerald-500/10 rounded-full flex items-center justify-center mx-auto mb-4 shadow-xl shadow-orange-500/25">
-                  <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-              </div>
-              <h5 class="text-xl font-semibold mb-2 text-white">Confidence</h5>
-              <p class="text-gray-300">Informed decisions about the future</p>
+            <h5 class="text-4xl font-semibold mb-6 text-black group-hover:text-orange-600 transition-colors duration-300">Clarity</h5>
+            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300 text-lg max-w-md mx-auto">Gain understanding through hands-on experience and real-world application</p>
+          </div>
+          
+          <!-- Arrow 2 to 3 -->
+          <div class="journey-arrow" data-arrow="2">
+            <svg class="arrow-svg" viewBox="0 0 100 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 10 L85 10 M80 5 L85 10 L80 15" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          
+          <!-- Confidence Step -->
+          <div class="journey-step text-center group relative" data-step="3">
+            <div class="relative w-64 h-64 mx-auto mb-8 rounded-3xl overflow-hidden shadow-2xl shadow-gray-500/30 backdrop-blur-sm group-hover:shadow-gray-500/50 transition-all duration-300">
+              <div class="absolute inset-0 bg-gradient-to-br from-gray-100/80 via-gray-200/60 to-gray-300/40 group-hover:from-gray-200/90 group-hover:via-gray-300/70 group-hover:to-gray-400/50 transition-all duration-300"></div>
+              <img 
+                src="/src/assets/images/confidence.png" 
+                alt="Confidence" 
+                class="relative z-10 w-full h-full object-cover rounded-2xl group-hover:scale-110 transition-transform duration-300"
+              />
             </div>
+            <div class="absolute -top-2 -right-2 w-12 h-12 bg-gray-600 rounded-full flex items-center justify-center step-number">
+              <span class="text-white text-lg font-bold">3</span>
+            </div>
+            <h5 class="text-4xl font-semibold mb-6 text-black group-hover:text-gray-600 transition-colors duration-300">Confidence</h5>
+            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300 text-lg max-w-md mx-auto">Pursue your passion with confidence and clear direction</p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+  
+  <!-- Spacer for scroll -->
+  <div class="scroll-spacer"></div>
+</div>
 
 <style>
-  @keyframes spin-slow {
-    from {
-      transform: rotate(0deg);
+  /* Sticky Scroll Container */
+  .sticky-scroll-container {
+    position: relative;
+  }
+  
+  /* Header content within sticky section */
+  .journey-header-content {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .journey-header-content.fade-out {
+    opacity: 0;
+  }
+  
+  /* Sticky Journey Section */
+  .journey-section {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #fafaf9 0%, #ffffff 50%, #fafaf9 100%);
+    overflow: hidden;
+    z-index: 5;
+  }
+  
+  .sticky-content {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .journey-viewport {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  /* Journey Track - Horizontal Layout */
+  .journey-track {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    transform: translateX(0);
+    transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0 2rem;
+  }
+  
+  /* Journey Steps */
+  .journey-step {
+    flex: 0 0 auto;
+    width: 400px;
+    opacity: 0;
+    transform: translateX(100px) scale(0.8);
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+  }
+  
+  .journey-step.active {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  
+  .journey-step.visible {
+    opacity: 0.3;
+    transform: translateX(0) scale(0.9);
+  }
+  
+  /* Step Numbers */
+  .step-number {
+    transform: scale(0);
+    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .journey-step.active .step-number {
+    transform: scale(1);
+  }
+  
+  /* Journey Arrows */
+  .journey-arrow {
+    flex: 0 0 auto;
+    width: 80px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 10;
+  }
+  
+  .journey-arrow.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .arrow-svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 2px 4px rgba(16, 185, 129, 0.2));
+  }
+  
+  .journey-arrow .arrow-svg path {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    transition: stroke-dashoffset 1s ease-in-out;
+  }
+  
+  .journey-arrow.visible .arrow-svg path {
+    stroke-dashoffset: 0;
+  }
+
+  /* Enhanced hover effects */
+  .journey-step:hover {
+    transform: translateX(0) scale(1.05) translateY(-10px);
+  }
+  
+  .journey-step.active:hover {
+    transform: translateX(0) scale(1.05) translateY(-10px);
+  }
+  
+  /* Scroll Spacer */
+  .scroll-spacer {
+    height: 300vh; /* Creates scroll space for 3 steps */
+  }
+  
+  /* Large Device Specific Styling */
+  @media (min-width: 1024px) {
+    .journey-track {
+      gap: 1.2rem;
+      max-width: 1100px;
+      padding: 0 1.5rem;
     }
-    to {
-      transform: rotate(360deg);
+    
+    .journey-step {
+      width: 320px;
+    }
+    
+    .journey-arrow {
+      width: 80px;
+    }
+  }
+
+  /* Mobile Responsive */
+  @media (max-width: 1024px) {
+    .journey-header-content {
+      top: 4rem;
+    }
+    
+    .journey-header-content h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .journey-track {
+      flex-direction: column;
+      gap: 4rem;
+      height: 100%;
+      justify-content: center;
+      margin-top: 6rem;
+    }
+    
+    .journey-arrow {
+      width: 20px;
+      height: 60px;
+      transform: rotate(90deg) scale(0.5);
+    }
+    
+    .journey-arrow.visible {
+      transform: rotate(90deg) scale(1);
+    }
+    
+    .journey-step {
+      width: 100%;
+      max-width: 400px;
+      transform: translateY(50px) scale(0.8);
+    }
+    
+    .journey-step.active {
+      transform: translateY(0) scale(1);
+    }
+    
+    .journey-step.visible {
+      transform: translateY(0) scale(0.9);
+    }
+    
+    .scroll-spacer {
+      height: 200vh;
     }
   }
   
-  .animate-spin-slow {
-    animation: spin-slow 8s linear infinite;
+  @media (max-width: 768px) {
+    .journey-header-content {
+      top: 2rem;
+      padding: 0 1rem;
+    }
+    
+    .journey-header-content h3 {
+      font-size: 1.5rem;
+    }
+    
+    .journey-step .w-64 {
+      width: 12rem;
+      height: 12rem;
+    }
+    
+    .journey-step {
+      width: 100%;
+      max-width: 320px;
+    }
+    
+    .journey-track {
+      gap: 3rem;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+  }
+  
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    .journey-step,
+    .step-number,
+    .journey-track {
+      transition: opacity 0.3s ease;
+      transform: none;
+    }
+    
+    .journey-step.active {
+      opacity: 1;
+      transform: none;
+    }
   }
 </style>
+
+<script>
+  // Sticky Scroll Journey Animation Controller
+  class StickyJourneyAnimator {
+    constructor() {
+      this.container = null;
+      this.steps = [];
+      this.lines = [];
+      this.scrollSpacer = null;
+      this.currentStep = 0;
+      this.isAnimating = false;
+      this.init();
+    }
+
+    init() {
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => this.setup());
+      } else {
+        this.setup();
+      }
+    }
+
+    setup() {
+      this.container = document.querySelector('[data-journey-animation]');
+      this.scrollSpacer = document.querySelector('.scroll-spacer');
+      this.headerContent = document.querySelector('.journey-header-content');
+      
+      if (!this.container || !this.scrollSpacer) return;
+
+      this.steps = Array.from(this.container.querySelectorAll('.journey-step'));
+      this.arrows = Array.from(this.container.querySelectorAll('.journey-arrow'));
+
+      // Initialize first step as active
+      if (this.steps.length > 0) {
+        this.steps[0].classList.add('active');
+        this.currentStep = 1;
+      }
+
+      this.bindScrollEvents();
+    }
+
+    bindScrollEvents() {
+      let ticking = false;
+      
+      const handleScroll = () => {
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            this.updateStepsBasedOnScroll();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      };
+
+      window.addEventListener('scroll', handleScroll, { passive: true });
+    }
+
+    updateStepsBasedOnScroll() {
+      if (this.isAnimating) return;
+
+      const scrollTop = window.pageYOffset;
+      const windowHeight = window.innerHeight;
+      
+      // Get the sticky section's position
+      const stickySection = this.container.getBoundingClientRect();
+      const spacerRect = this.scrollSpacer.getBoundingClientRect();
+      
+      // Calculate scroll progress through the spacer
+      const spacerTop = spacerRect.top + scrollTop;
+      const spacerHeight = spacerRect.height;
+      const scrollProgress = Math.max(0, Math.min(1, (scrollTop - spacerTop + windowHeight) / spacerHeight));
+      
+      // Keep header content visible throughout all steps
+      // Removed fade-out logic to maintain header visibility
+      
+      // Determine which step should be active based on scroll progress
+      let targetStep;
+      if (scrollProgress < 0.33) {
+        targetStep = 1;
+      } else if (scrollProgress < 0.66) {
+        targetStep = 2;
+      } else {
+        targetStep = 3;
+      }
+
+      // Only animate if we're changing steps
+      if (targetStep !== this.currentStep) {
+        this.animateToStep(targetStep);
+      }
+    }
+
+    animateToStep(stepNumber) {
+      if (this.isAnimating || stepNumber < 1 || stepNumber > this.steps.length) return;
+      
+      this.isAnimating = true;
+      this.currentStep = stepNumber;
+
+      // Reset all steps
+      this.steps.forEach((step, index) => {
+        step.classList.remove('active', 'visible');
+        
+        if (index + 1 === stepNumber) {
+          // Current active step
+          step.classList.add('active');
+        } else if (index + 1 < stepNumber) {
+          // Previous steps - make them visible but not active
+          step.classList.add('visible');
+        }
+        // Future steps remain hidden (no classes)
+      });
+
+      // Update arrows visibility
+      this.arrows.forEach((arrow, index) => {
+        arrow.classList.remove('visible');
+        
+        // Show arrow if the next step is active or visible
+        if (index + 2 <= stepNumber) {
+          arrow.classList.add('visible');
+        }
+      });
+
+      // Reset animation lock after transition
+      setTimeout(() => {
+        this.isAnimating = false;
+      }, 1000);
+    }
+
+    // Public method to manually trigger step animation
+    goToStep(stepNumber) {
+      this.animateToStep(stepNumber);
+    }
+
+    // Method to get current step
+    getCurrentStep() {
+      return this.currentStep;
+    }
+  }
+
+  // Initialize the sticky journey animator
+  const journeyAnimator = new StickyJourneyAnimator();
+
+  // Optional: Add keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft' && journeyAnimator.getCurrentStep() > 1) {
+      journeyAnimator.goToStep(journeyAnimator.getCurrentStep() - 1);
+    } else if (e.key === 'ArrowRight' && journeyAnimator.getCurrentStep() < 3) {
+      journeyAnimator.goToStep(journeyAnimator.getCurrentStep() + 1);
+    }
+  });
+
+  // Expose to global scope for debugging
+  window.journeyAnimator = journeyAnimator;
+</script>

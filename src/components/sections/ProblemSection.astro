@@ -2,95 +2,156 @@
 // Problem Section Component
 ---
 
-<section class="py-16 lg:py-24 bg-gray-800" data-scroll-fade>
+<section class="py-16 lg:py-24 bg-stone-50" data-scroll-fade>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      <!-- Content -->
-      <div class="space-y-8">
-        <div class="space-y-4">
-          <div class="inline-flex items-center px-4 py-2 bg-orange-500/20 text-orange-300 border border-orange-500/30 rounded-full text-sm font-medium">
-            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-            </svg>
-            The Problem
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <div class="inline-flex items-center px-4 py-2 bg-orange-100 text-orange-700 border border-orange-200 rounded-full text-sm font-medium mb-4">
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+        </svg>
+        The Problem
+      </div>
+      <h3 class="text-3xl sm:text-4xl font-bold text-black leading-tight mb-4">
+        What's Missing in Today's School System?
+      </h3>
+      <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+        Swipe through the key issues in modern education
+      </p>
+    </div>
+
+    <!-- Horizontal Scroll Container -->
+    <div class="relative">
+      <!-- Navigation Buttons -->
+      <button id="problemPrevBtn" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-black p-3 rounded-full shadow-lg transition-all duration-200 backdrop-blur-sm border border-gray-200">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      
+      <button id="problemNextBtn" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-black p-3 rounded-full shadow-lg transition-all duration-200 backdrop-blur-sm border border-gray-200">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+
+      <!-- Scroll Container -->
+      <div id="problemScrollContainer" class="overflow-x-auto scrollbar-hide mx-8" style="scroll-snap-type: x mandatory; scroll-behavior: smooth;">
+        <div class="flex gap-8 pb-4">
+          <!-- Panel 1: Hands-on Exposure -->
+          <div class="flex-none w-80 lg:w-96 bg-white rounded-2xl p-8 scroll-snap-align-start border border-gray-200 shadow-lg">
+            <div class="space-y-6">
+              <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
+              <h4 class="text-2xl font-bold text-black mb-4">Missing Hands-On Exposure</h4>
+              <p class="text-gray-700 leading-relaxed">
+                In today's school system, what's missing is <strong class="text-black">hands-on exposure</strong> — 
+                the kind that connects classroom learning to how things actually work in the real world.
+              </p>
+              <div class="bg-orange-50 border-l-4 border-orange-500 p-4 rounded-r-lg">
+                <p class="text-orange-700 text-sm font-medium">
+                  Students learn theory but miss practical application
+                </p>
+              </div>
+            </div>
           </div>
-          <h3 class="text-3xl sm:text-4xl font-bold text-white leading-tight">
-            What's Missing in Today's School System?
-          </h3>
-        </div>
-        
-        <div class="space-y-6 text-lg text-gray-300 leading-relaxed">
-          <p>
-            In today's school system, what's missing is <strong class="text-white">hands-on exposure</strong> — 
-            the kind that connects classroom learning to how things actually work in the real world.
-          </p>
-          
-          <p>
-            Students are already exploring multiple interests — coding, creating, designing, experimenting — 
-            yet they rarely understand what really goes on <strong class="text-white">behind the scenes</strong>. 
-            Why wait until college to figure that out?
-          </p>
-          
-          <p>
-            Even engineering graduates often spend years trying to understand what they truly want to do. 
-            Not because they lack capability, but because there's no <strong class="text-white">flow of understanding</strong> 
-            that links their learning to real-world application.
-          </p>
-        </div>
-        
-        <div class="bg-orange-500/20 border-l-4 border-orange-400 p-6 rounded-r-lg">
-          <p class="text-orange-300 font-medium">
-            Many end up stuck in a loop of endless learning, without clarity or direction.
-          </p>
+
+          <!-- Panel 2: Behind the Scenes -->
+          <div class="flex-none w-80 lg:w-96 bg-white rounded-2xl p-8 scroll-snap-align-start border border-gray-200 shadow-lg">
+            <div class="space-y-6">
+              <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+              </div>
+              <h4 class="text-2xl font-bold text-black mb-4">No Behind-the-Scenes Understanding</h4>
+              <p class="text-gray-700 leading-relaxed">
+                Students are already exploring multiple interests — coding, creating, designing, experimenting — 
+                yet they rarely understand what really goes on <strong class="text-black">behind the scenes</strong>. 
+                Why wait until college to figure that out?
+              </p>
+              <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+                <p class="text-green-700 text-sm font-medium">
+                  Curiosity exists but lacks real-world context
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 3: Flow of Understanding -->
+          <div class="flex-none w-80 lg:w-96 bg-white rounded-2xl p-8 scroll-snap-align-start border border-gray-200 shadow-lg">
+            <div class="space-y-6">
+              <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h4 class="text-2xl font-bold text-black mb-4">Broken Flow of Understanding</h4>
+              <p class="text-gray-700 leading-relaxed">
+                Even engineering graduates often spend years trying to understand what they truly want to do. 
+                Not because they lack capability, but because there's no <strong class="text-black">flow of understanding</strong> 
+                that links their learning to real-world application.
+              </p>
+              <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg">
+                <p class="text-green-700 text-sm font-medium">
+                  Graduates struggle with career direction
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 4: Endless Learning Loop -->
+          <div class="flex-none w-80 lg:w-96 bg-white rounded-2xl p-8 scroll-snap-align-start border border-gray-200 shadow-lg">
+            <div class="space-y-6">
+              <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h4 class="text-2xl font-bold text-black mb-4">The Endless Learning Loop</h4>
+              <p class="text-gray-700 leading-relaxed">
+                Many end up stuck in a loop of endless learning, without clarity or direction. 
+                They consume content but never gain the confidence to apply their knowledge meaningfully.
+              </p>
+              <div class="bg-orange-50 border-l-4 border-orange-500 p-4 rounded-r-lg">
+                <p class="text-orange-700 text-sm font-medium">
+                  Learning without purpose leads to confusion
+                </p>
+              </div>
+              <!-- Animated dots -->
+              <div class="flex justify-center space-x-2 mt-6">
+                <div class="w-2 h-2 bg-orange-500 rounded-full animate-bounce"></div>
+                <div class="w-2 h-2 bg-orange-500 rounded-full animate-bounce" style="animation-delay: 0.1s"></div>
+                <div class="w-2 h-2 bg-orange-500 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      
-      <!-- Visual -->
-      <div class="relative">
-        <div class="bg-gradient-to-br from-gray-700 to-gray-600 rounded-2xl p-8 h-96 flex items-center justify-center">
-          <!-- Illustration placeholder -->
-          <div class="text-center space-y-4">
-            <div class="w-24 h-24 mx-auto bg-gray-600 rounded-full flex items-center justify-center">
-              <svg class="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <p class="text-gray-300 font-medium">Students asking "What should I do?"</p>
-            <div class="flex justify-center space-x-2">
-              <div class="w-2 h-2 bg-orange-400 rounded-full animate-bounce"></div>
-              <div class="w-2 h-2 bg-orange-400 rounded-full animate-bounce" style="animation-delay: 0.1s"></div>
-              <div class="w-2 h-2 bg-orange-400 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Floating elements -->
-        <div class="absolute -top-4 -right-4 bg-gray-700 border border-gray-600 rounded-lg shadow-lg p-4 ">
-          <div class="flex items-center space-x-2">
-            <div class="w-3 h-3 bg-red-400 rounded-full"></div>
-            <span class="text-sm font-medium text-gray-200">Confusion</span>
-          </div>
-        </div>
-        
-        <div class="absolute -bottom-4 -left-4 bg-gray-700 border border-gray-600 rounded-lg shadow-lg p-4 ">
-          <div class="flex items-center space-x-2">
-            <div class="w-3 h-3 bg-yellow-400 rounded-full"></div>
-            <span class="text-sm font-medium text-gray-200">Endless Learning</span>
-          </div>
-        </div>
+
+      <!-- Scroll Indicators -->
+      <div class="flex justify-center mt-8 space-x-2">
+        <div id="problemIndicator0" class="w-2 h-2 bg-orange-500 rounded-full transition-all duration-300"></div>
+        <div id="problemIndicator1" class="w-2 h-2 bg-gray-400 rounded-full transition-all duration-300"></div>
+        <div id="problemIndicator2" class="w-2 h-2 bg-gray-400 rounded-full transition-all duration-300"></div>
+        <div id="problemIndicator3" class="w-2 h-2 bg-gray-400 rounded-full transition-all duration-300"></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- The Missing Layer Section -->
-<section class="py-16 lg:py-24 bg-gray-900">
+<section class="py-16 lg:py-24 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
-      <h3 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+      <h3 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-6">
         Understanding the Learning Gap
       </h3>
-      <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+      <p class="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
         Enhance your educational experience with our comprehensive approach, 
         offering deeper insights and meaningful connections for modern learning needs.
       </p>

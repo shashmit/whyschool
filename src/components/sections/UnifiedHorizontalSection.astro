@@ -1,0 +1,515 @@
+---
+// Unified Horizontal Scroll Section Component
+---
+
+<!-- Sticky Container with Virtual Height -->
+<div class="sticky-horizontal-wrapper" style="height: 400vh;">
+  <section id="unifiedHorizontalSection" class="sticky top-0 h-screen overflow-hidden bg-white" data-scroll-fade>
+    <!-- Progress Indicator -->
+    <div class="fixed top-1/2 right-8 transform -translate-y-1/2 z-50">
+      <div class="flex flex-col space-y-3">
+        <div id="indicator-0" class="w-3 h-3 bg-orange-500 rounded-full transition-all duration-300"></div>
+        <div id="indicator-1" class="w-2 h-2 bg-gray-400 rounded-full transition-all duration-300"></div>
+        <div id="indicator-2" class="w-2 h-2 bg-gray-400 rounded-full transition-all duration-300"></div>
+      </div>
+    </div>
+
+    <!-- Horizontal Scroll Container -->
+    <div id="horizontalContainer" class="flex h-full transition-transform duration-300 ease-out">
+      
+      <!-- Panel 1: The Problem -->
+      <div class="flex-none w-full h-full flex items-center justify-center px-8 lg:px-16">
+        <div class="max-w-7xl mx-auto w-full">
+          <!-- Section Header -->
+          <div class="text-center mb-12">
+            <div class="inline-flex items-center px-4 py-2 bg-orange-100 text-orange-700 border border-orange-300 rounded-full text-sm font-medium mb-4">
+              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+              The Problem
+            </div>
+            <h3 class="text-3xl sm:text-4xl font-bold text-black leading-tight mb-4">
+              What's Missing in Today's School System?
+            </h3>
+            <p class="text-lg text-green-700 max-w-2xl mx-auto">
+              Key issues in modern education
+            </p>
+          </div>
+
+          <!-- Problem Cards Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            <!-- Card 1: Hands-on Exposure -->
+            <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-6 border border-gray-200">
+              <div class="w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
+              <h4 class="text-xl font-bold text-black mb-3">Missing Hands-On Exposure</h4>
+              <p class="text-green-700 text-sm leading-relaxed">
+                Students learn theory but miss practical application that connects classroom learning to real-world scenarios.
+              </p>
+            </div>
+
+            <!-- Card 2: Behind the Scenes -->
+            <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-6 border border-gray-200">
+              <div class="w-12 h-12 bg-sky-500/20 rounded-full flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+              </div>
+              <h4 class="text-xl font-bold text-black mb-3">No Behind-the-Scenes Understanding</h4>
+              <p class="text-green-700 text-sm leading-relaxed">
+                Curiosity exists but lacks real-world context. Students explore interests without understanding industry mechanics.
+              </p>
+            </div>
+
+            <!-- Card 3: Flow of Understanding -->
+            <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-6 border border-gray-200">
+              <div class="w-12 h-12 bg-emerald-500/20 rounded-full flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h4 class="text-xl font-bold text-black mb-3">Broken Flow of Understanding</h4>
+              <p class="text-green-700 text-sm leading-relaxed">
+                Graduates struggle with career direction due to lack of connection between learning and real-world application.
+              </p>
+            </div>
+
+            <!-- Card 4: Endless Learning Loop -->
+            <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-6 border border-gray-200">
+              <div class="w-12 h-12 bg-red-500/20 rounded-full flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h4 class="text-xl font-bold text-black mb-3">The Endless Learning Loop</h4>
+              <p class="text-green-700 text-sm leading-relaxed">
+                Learning without purpose leads to confusion. Students consume content but lack confidence to apply knowledge meaningfully.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 2: Understanding the Learning Gap -->
+      <div class="flex-none w-full h-full flex items-center justify-center px-8 lg:px-16 bg-white">
+        <div class="max-w-7xl mx-auto w-full">
+          <div class="text-center mb-12">
+            <h3 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-6">
+              Understanding the Learning Gap
+            </h3>
+            <p class="text-xl text-green-700 max-w-3xl mx-auto leading-relaxed">
+              Enhance your educational experience with our comprehensive approach
+            </p>
+          </div>
+          
+          <!-- Card Layout Grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 h-auto lg:h-96 max-w-6xl mx-auto">
+            <!-- Large Feature Card (Left) -->
+            <div class="lg:col-span-2 bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-8 relative overflow-hidden h-full border border-green-200">
+              <!-- Background Pattern -->
+              <div class="absolute inset-0 opacity-20">
+                <svg class="w-full h-full" viewBox="0 0 400 300" fill="none">
+                  <circle cx="350" cy="50" r="80" fill="currentColor" opacity="0.3"/>
+                  <circle cx="50" cy="250" r="60" fill="currentColor" opacity="0.2"/>
+                  <path d="M200 100L250 150L200 200L150 150Z" fill="currentColor" opacity="0.4"/>
+                </svg>
+              </div>
+              
+              <div class="relative z-10 h-full flex flex-col justify-between">
+                <div class="mb-6">
+                  <span class="inline-block px-3 py-1 bg-orange-100 text-orange-600 rounded-full text-sm font-medium mb-4">
+                    Bridging the Gap
+                  </span>
+                  <h4 class="text-2xl lg:text-3xl font-bold mb-4 text-black">
+                    Our knowledge inspires us to innovate continuously
+                  </h4>
+                  <p class="text-green-700 leading-relaxed mb-6">
+                    We connect the "what" and "how" of learning with the crucial "why" - 
+                    transforming curiosity into clarity and learning into understanding.
+                  </p>
+                </div>
+                
+                <button class="inline-flex items-center px-6 py-3 bg-orange-500 hover:bg-orange-600 rounded-lg text-white font-medium transition-colors duration-200 self-start">
+                  Explore Our Approach
+                  <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            
+            <!-- Right Column - 2x2 Grid -->
+            <div class="grid grid-rows-2 gap-6 h-full">
+              <!-- Top Right Card - Sky Blue -->
+              <div class="bg-gradient-to-br from-blue-50 to-sky-100 rounded-2xl p-6 relative h-full flex flex-col justify-between border border-blue-200">
+                <div>
+                  <div class="flex justify-between items-start mb-4">
+                    <div>
+                      <p class="text-sm text-green-600 mb-2">Deep Understanding Through</p>
+                      <h5 class="text-xl font-bold mb-2 text-black">Why-Based Learning</h5>
+                    </div>
+                    <svg class="w-6 h-6 opacity-60 flex-shrink-0 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                  </div>
+                  <p class="text-green-700 text-sm">
+                    Connecting knowledge to real-world purpose and meaning.
+                  </p>
+                </div>
+              </div>
+              
+              <!-- Bottom Right Card - Light Gray -->
+              <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-6 relative h-full flex flex-col justify-between border border-gray-200">
+                <div>
+                  <h5 class="text-xl font-bold mb-3 text-black">Complete Learning Solutions</h5>
+                  <p class="text-green-700 text-sm leading-relaxed">
+                    Comprehensive educational strategies that bridge theory with practical application.
+                  </p>
+                </div>
+                <div class="flex justify-end mt-4">
+                  <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 3: Real-World Exposure & Industry Context -->
+      <div class="flex-none w-full h-full flex items-center justify-center px-8 lg:px-16 bg-white">
+        <div class="max-w-7xl mx-auto w-full">
+          <div class="text-center mb-12">
+            <div class="inline-flex items-center px-4 py-2 bg-orange-100 text-orange-700 border border-orange-300 rounded-full text-sm font-medium mb-4">
+              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+              </svg>
+              What We're Building
+            </div>
+            <h3 class="text-3xl sm:text-4xl font-bold text-black mb-6">
+              Real-World Exposure & Industry Context
+            </h3>
+            <p class="text-xl text-green-700 max-w-3xl mx-auto">
+              We bring real-world exposure and industry context directly into the school experience.
+            </p>
+          </div>
+          
+          <!-- Domain Images -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto mb-12">
+            <!-- Technology -->
+            <div class="p-2">
+              <div class="group relative h-80 w-80 lg:h-96 rounded-2xl overflow-hidden shadow-2xl hover:shadow-orange-500/25 transition-all duration-500 transform hover:-translate-y-2">
+              <!-- Background Pattern -->
+              <div class="absolute inset-0 bg-gradient-to-br from-orange-500/20 via-red-500/10 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <!-- Glowing Border -->
+              <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 p-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <div class="w-full h-full bg-white rounded-2xl"></div>
+              </div>
+              
+              <!-- Image Container -->
+              <div class="relative z-10 w-full h-full overflow-hidden rounded-2xl">
+                <img src="/src/assets/images/tech.png" alt="Technology Learning" class="w-full h-full object-cover transition-transform duration-700 " />
+                
+                <!-- Gradient Overlay -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <!-- Content Overlay -->
+                <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                  <h4 class="text-white font-bold text-xl mb-2">Technology</h4>
+                  <p class="text-gray-200 text-sm">Explore cutting-edge tech innovations</p>
+                </div>
+              </div>
+              
+              <!-- Decorative Elements -->
+              <div class="absolute top-4 right-4 w-3 h-3 bg-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
+              <div class="absolute bottom-4 left-4 w-2 h-2 bg-purple-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-pulse"></div>
+              </div>
+            </div>
+            
+            <!-- Design -->
+            <div class="p-2">
+              <div class="group relative h-80 w-80 lg:h-96 rounded-2xl overflow-hidden shadow-2xl hover:shadow-blue-500/25 transition-all duration-500 transform hover:-translate-y-2">
+              <!-- Background Pattern -->
+              <div class="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-cyan-500/10 to-teal-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <!-- Glowing Border -->
+              <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-400 via-cyan-500 to-teal-600 p-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <div class="w-full h-full bg-white rounded-2xl"></div>
+              </div>
+              
+              <!-- Image Container -->
+              <div class="relative z-10 w-full h-full overflow-hidden rounded-2xl">
+                <img src="/src/assets/images/design.png" alt="Design Learning" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                
+                <!-- Gradient Overlay -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <!-- Content Overlay -->
+                <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                  <h4 class="text-white font-bold text-xl mb-2">Design</h4>
+                  <p class="text-gray-200 text-sm">Master creative design principles</p>
+                </div>
+              </div>
+              
+              <!-- Decorative Elements -->
+              <div class="absolute top-4 right-4 w-3 h-3 bg-blue-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
+              <div class="absolute bottom-4 left-4 w-2 h-2 bg-cyan-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-pulse"></div>
+              </div>
+            </div>
+            
+            <!-- Finance -->
+            <div class="p-2">
+              <div class="group relative h-80  w-80 lg:h-96 rounded-2xl overflow-hidden shadow-2xl hover:shadow-green-500/25 transition-all duration-500 transform  hover:-translate-y-2">
+              <!-- Background Pattern -->
+              <div class="absolute inset-0 bg-gradient-to-br from-green-500/20 via-emerald-500/10 to-teal-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <!-- Glowing Border -->
+              <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-green-400 via-emerald-500 to-teal-600 p-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <div class="w-full h-full bg-white rounded-2xl"></div>
+              </div>
+              
+              <!-- Image Container -->
+              <div class="relative z-10 w-full h-full overflow-hidden rounded-2xl">
+                <img src="/src/assets/images/finance.png" alt="Finance Learning" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                
+                <!-- Gradient Overlay -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <!-- Content Overlay -->
+                <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                  <h4 class="text-white font-bold text-xl mb-2">Finance</h4>
+                  <p class="text-gray-200 text-sm">Understand financial markets & strategy</p>
+                </div>
+              </div>
+              
+              <!-- Decorative Elements -->
+              <div class="absolute top-4 right-4 w-3 h-3 bg-green-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
+              <div class="absolute bottom-4 left-4 w-2 h-2 bg-emerald-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-pulse"></div>
+              </div>
+            </div>
+            
+            <!-- Entrepreneurship -->
+            <div class="p-2">
+              <div class="group relative h-80 w-80 lg:h-96 rounded-2xl overflow-hidden shadow-2xl hover:shadow-purple-500/25 transition-all duration-500 transform hover:-translate-y-2">
+              <!-- Background Pattern -->
+              <div class="absolute inset-0 bg-gradient-to-br from-purple-500/20 via-pink-500/10 to-red-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <!-- Glowing Border -->
+              <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-400 via-pink-500 to-red-600 p-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <div class="w-full h-full bg-white rounded-2xl"></div>
+              </div>
+              
+              <!-- Image Container -->
+              <div class="relative z-10 w-full h-full overflow-hidden rounded-2xl">
+                <img src="/src/assets/images/entrepreneurship.png" alt="Entrepreneurship Learning" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                
+                <!-- Gradient Overlay -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <!-- Content Overlay -->
+                <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                  <h4 class="text-white font-bold text-xl mb-2">Entrepreneurship</h4>
+                  <p class="text-gray-200 text-sm">Build innovative business ventures</p>
+                </div>
+              </div>
+              
+              <!-- Decorative Elements -->
+              <div class="absolute top-4 right-4 w-3 h-3 bg-purple-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
+              <div class="absolute bottom-4 left-4 w-2 h-2 bg-pink-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-pulse"></div>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  /* Sticky horizontal scroll styles */
+  .sticky-horizontal-wrapper {
+    position: relative;
+  }
+
+  /* Smooth transitions */
+  #horizontalContainer {
+    will-change: transform;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .sticky-horizontal-wrapper {
+      height: auto !important;
+    }
+    
+    #unifiedHorizontalSection {
+      position: relative !important;
+      height: auto !important;
+      min-height: 100vh;
+    }
+    
+    #horizontalContainer {
+      flex-direction: column;
+      height: auto;
+    }
+    
+    #horizontalContainer > div {
+      width: 100% !important;
+      height: auto !important;
+      min-height: 100vh;
+    }
+  }
+</style>
+
+<script>
+  class StickyHorizontalScroll {
+    constructor() {
+      this.wrapper = document.querySelector('.sticky-horizontal-wrapper');
+      this.section = document.getElementById('unifiedHorizontalSection');
+      this.container = document.getElementById('horizontalContainer');
+      this.totalPanels = 3;
+      this.currentProgress = 0;
+      this.isActive = false;
+      
+      if (this.wrapper && this.section && this.container) {
+        this.init();
+      }
+    }
+
+    init() {
+      this.setupScrollListener();
+      this.updateIndicators();
+    }
+
+    setupScrollListener() {
+      let ticking = false;
+
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            this.handleScroll();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+
+      // Touch events for mobile
+      let touchStartX = 0;
+      let touchStartY = 0;
+
+      this.section.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+      });
+
+      this.section.addEventListener('touchend', (e) => {
+        const touchEndX = e.changedTouches[0].clientX;
+        const touchEndY = e.changedTouches[0].clientY;
+        const deltaX = touchStartX - touchEndX;
+        const deltaY = touchStartY - touchEndY;
+
+        // Check if horizontal swipe is more significant than vertical
+        if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
+          if (deltaX > 0 && this.currentProgress < 1) {
+            // Swipe left -> move right
+            this.currentProgress = Math.min(1, this.currentProgress + 0.33);
+            this.updatePosition();
+          } else if (deltaX < 0 && this.currentProgress > 0) {
+            // Swipe right -> move left
+            this.currentProgress = Math.max(0, this.currentProgress - 0.33);
+            this.updatePosition();
+          }
+        }
+      });
+    }
+
+    handleScroll() {
+      const wrapperRect = this.wrapper.getBoundingClientRect();
+      const wrapperHeight = this.wrapper.offsetHeight;
+      const viewportHeight = window.innerHeight;
+      
+      // Check if wrapper is in viewport
+      const isInViewport = wrapperRect.top <= 0 && wrapperRect.bottom >= viewportHeight;
+      
+      if (isInViewport) {
+        this.isActive = true;
+        
+        // Add buffer zones (25% of viewport height) at beginning and end
+        const bufferZone = viewportHeight * 0.25;
+        const scrollableHeight = wrapperHeight - viewportHeight - (bufferZone * 2);
+        const currentScroll = Math.abs(wrapperRect.top);
+        const totalScrollableArea = wrapperHeight - viewportHeight;
+        
+        // Check which zone we're in
+        if (currentScroll <= bufferZone) {
+          // In start buffer zone - keep first section fully visible
+          this.currentProgress = 0;
+        } else if (currentScroll >= totalScrollableArea - bufferZone) {
+          // In end buffer zone - keep last section fully visible
+          this.currentProgress = 1;
+        } else {
+          // In middle scrollable area - calculate horizontal scroll progress
+          const adjustedScroll = currentScroll - bufferZone;
+          const scrollProgress = adjustedScroll / scrollableHeight;
+          this.currentProgress = Math.max(0, Math.min(1, scrollProgress));
+        }
+        
+        this.updatePosition();
+      } else {
+        this.isActive = false;
+      }
+    }
+
+    updatePosition() {
+      // Calculate translateX based on progress (0 to -200% for 3 panels)
+      const translateX = -this.currentProgress * 200; // 200% for 3 panels
+      
+      this.container.style.transform = `translateX(${translateX}%)`;
+      this.updateIndicators();
+    }
+
+    updateIndicators() {
+      // Calculate which panel is most visible
+      const panelProgress = this.currentProgress * (this.totalPanels - 1);
+      const currentPanel = Math.round(panelProgress);
+      
+      for (let i = 0; i < this.totalPanels; i++) {
+        const indicator = document.getElementById(`indicator-${i}`);
+        if (indicator) {
+          if (i === currentPanel) {
+            indicator.className = 'w-3 h-3 bg-orange-500 rounded-full transition-all duration-300';
+          } else {
+            indicator.className = 'w-2 h-2 bg-gray-400 rounded-full transition-all duration-300';
+          }
+        }
+      }
+    }
+  }
+
+  // Initialize when DOM is loaded
+  document.addEventListener('DOMContentLoaded', () => {
+    // Only initialize on desktop
+    if (window.innerWidth > 768) {
+      new StickyHorizontalScroll();
+    }
+  });
+
+  // Handle resize
+  window.addEventListener('resize', () => {
+    if (window.innerWidth <= 768) {
+      // Reset transforms on mobile
+      const container = document.getElementById('horizontalContainer');
+      if (container) {
+        container.style.transform = 'translateX(0%)';
+      }
+    }
+  });
+</script>
