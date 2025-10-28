@@ -496,15 +496,16 @@
 
   // Initialize when DOM is loaded
   document.addEventListener('DOMContentLoaded', () => {
-    // Initialize on all screen sizes
-    new StickyHorizontalScroll();
+    // Only initialize on desktop
+    if (window.innerWidth > 768) {
+      new StickyHorizontalScroll();
+    }
   });
 
   // Handle resize
   window.addEventListener('resize', () => {
-    // Keep the progress indicator functionality on all screen sizes
-    // Only reset horizontal transforms on mobile for better UX
     if (window.innerWidth <= 768) {
+      // Reset transforms on mobile
       const container = document.getElementById('horizontalContainer');
       if (container) {
         container.style.transform = 'translateX(0%)';
