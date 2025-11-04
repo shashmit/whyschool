@@ -2,99 +2,102 @@
 export interface Props {
   title: string;
   subtitle: string;
-  ctaText: string;
   ctaLink: string;
   backgroundImage?: string;
 }
 
-const { title, subtitle, ctaText, ctaLink, backgroundImage } = Astro.props;
+const { title, subtitle, ctaLink, backgroundImage } = Astro.props;
 ---
 
-<section class="relative bg-gradient-to-br from-stone-50 via-white to-stone-100 text-gray-900 overflow-hidden min-h-screen flex items-start sm:items-center pt-8 pb-28 sm:pb-32 hero-section" data-scroll-fade>
-  <!-- Organic Background Shapes with Parallax -->
+<section class="relative text-gray-900 overflow-hidden min-h-screen flex items-start sm:items-center pt-8 hero-section" data-scroll-fade>
+  <!-- 3D Background Elements -->
+  <div class="absolute inset-0 pointer-events-none overflow-hidden"></div>
 
   <!-- Content with proper centering -->
-  <div class="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
     <!-- Stylized WhySchool Title -->
-    <div class="text-center mb-16 md:mb-24">
+    <div class="text-center mb-12 md:mb-16">
       <div class="flex items-baseline justify-center">
-        <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-gray-600 opacity-70 select-none">
+        <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-gray-900 select-none">
           WhyS
         </h1>
-        <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-orange-400 opacity-80 select-none transform scale-x-[-1] translate-y-4 md:translate-y-10">
-          ?
-        </h1>
-        <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-gray-600 opacity-70 select-none">
+          <h1 class="text-6xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-orange-400 opacity-80 select-none scale-x-[-1] transform translate-y-2 md:translate-y-5">
+            ?
+          </h1>
+        <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-gray-900 select-none">
           hool
         </h1>
       </div>
+      <div class="mt-6 flex justify-center gap-3">
+        <div class="inline-block bg-green-300 border-4 border-gray-900 rounded-full px-6 py-2 transform -rotate-3 shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+          <span class="text-base sm:text-lg font-black text-gray-900">Question</span>
+        </div>
+        <div class="inline-block bg-cyan-300 border-4 border-gray-900 rounded-full px-6 py-2 transform rotate-2 shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+          <span class="text-base sm:text-lg font-black text-gray-900">Learn</span>
+        </div>
+        <div class="inline-block bg-yellow-300 border-4 border-gray-900 rounded-full px-6 py-2 transform -rotate-2 shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+          <span class="text-base sm:text-lg font-black text-gray-900">Build</span>
+        </div>
+      </div>
     </div>
     
-    <div class="flex flex-col items-center gap-8 lg:gap-16 lg:min-h-[80vh]">
+    <div class="flex flex-col items-center gap-8 lg:gap-16 lg:min-h-[70vh]">
       <!-- Small tag with entrance delay -->
   
       
-      <!-- Visual Element with enhanced animations - Now centered -->
-      <div class="relative hero-visual-animate w-full max-w-2xl mx-auto mt-8 pb-8 sm:pb-0" >
+      <!-- Visual Element with enhanced animations - Now centered and widened -->
+      <div class="relative hero-visual-animate w-full max-w-8xl mx-auto mt-8 pb-8 sm:pb-0" >
         <div class="relative">
           <!-- Main floating card with enhanced hover effects - Mobile optimized -->
-          <div class="relative animate-float-card">
-            <!-- Large organic shape background with rotation - Hidden on mobile for performance -->
-            <div class="hidden lg:block absolute -inset-8 bg-gradient-to-br from-green-100/40 to-orange-100/30 rounded-[3rem] transform rotate-3 animate-rotate-gentle"></div>
+          <div class="relative">
             
             <!-- Main content card with enhanced interactions - Mobile optimized -->
-            <div class="relative bg-white/90 backdrop-blur-sm rounded-2xl lg:rounded-3xl p-4 sm:p-6 lg:p-8 shadow-2xl border border-gray-200 transform ">
-              <!-- Video Container -->
-              <div class="relative mb-4 lg:mb-6 rounded-xl lg:rounded-2xl overflow-hidden">
-                <video 
-                  id="hero-video"
-                  class="w-full h-48 sm:h-56 lg:h-80 object-cover rounded-xl lg:rounded-2xl"
-                  autoplay 
-                  muted
-                  loop
-                  playsinline
-                >
-                  <source src="https://pasjrtnci5ayebee.public.blob.vercel-storage.com/The_Importance_of_Why_in_Education.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                
-                <!-- Mute/Unmute Button -->
-                <button 
-                  id="mute-toggle"
-                  class="absolute top-3 right-3 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200 backdrop-blur-sm"
-                  aria-label="Toggle mute"
-                >
-                  <svg id="mute-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" clip-rule="evenodd"/>
-                    <path id="mute-slash" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"/>
-                  </svg>
-                </button>
-              </div>
-
-              <!-- Main title positioned below video -->
-              <div class="text-center mb-4 lg:mb-6">
-                <h1 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight text-black hero-title-animate">
-                  {title}
-                </h1>
-              </div>
-
-              <!-- Card Content (initially hidden, shown after video) -->
-              <div id="card-content" class="opacity-100 transition-opacity duration-500">
-              
-                <!-- Progress indicator with animation -->
-                <div class="flex items-center justify-between">
-                  <div class="flex items-center space-x-2">
-                    <div class="w-6 h-6 lg:w-8 lg:h-8 bg-green-100 border border-green-300 rounded-full flex items-center justify-center">
-                      <svg class="w-3 h-3 lg:w-4 lg:h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                    <span class="text-xs lg:text-sm font-medium text-gray-700">78% Complete</span>
+            <div class="relative bg-white rounded-3xl p-4 sm:p-6 lg:p-8 border-4 border-gray-900 shadow-[8px_8px_0px_rgba(0,0,0,1)] transform hover:shadow-[12px_12px_0px_rgba(0,0,0,1)] transition-all duration-300">
+              <div class="grid lg:grid-cols-2 gap-6 lg:gap-8 items-center">
+                <!-- Left: Title, subtitle, CTA, progress -->
+                <div class="order-2 lg:order-1">
+                  <h1 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black leading-tight text-gray-900 hero-title-animate mb-4">
+                    {title}
+                  </h1>
+                  <p class="text-base sm:text-lg text-gray-700 mb-6">
+                    {subtitle}
+                  </p>
+                  <div class="flex items-center gap-4 mb-6">
+                    <a href="/curriculum" class="inline-block bg-yellow-300 hover:bg-yellow-400 border-4 border-gray-900 text-gray-900 font-black px-5 py-3 rounded-full shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all duration-200">
+                      Explore Curriculum
+                    </a>
                   </div>
-                  <div class="text-xs lg:text-sm text-orange-500 font-medium">Career Clarity</div>
+                 
+                </div>
+
+                <!-- Right: Video -->
+                <div class="order-1 lg:order-2">
+                  <div class="relative rounded-2xl overflow-hidden border-4 border-gray-900">
+                    <video 
+                      id="hero-video"
+                      class="w-full h-48 sm:h-56 lg:h-[360px] object-cover"
+                      autoplay 
+                      muted
+                      loop
+                      playsinline
+                    >
+                      <source src="https://pasjrtnci5ayebee.public.blob.vercel-storage.com/The_Importance_of_Why_in_Education.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <button 
+                      id="mute-toggle"
+                      type="button"
+                      class="absolute top-3 right-3 z-10 pointer-events-auto bg-orange-400 hover:bg-orange-500 border-4 border-gray-900 text-gray-900 p-3 rounded-full transition-all duration-200 shadow-[3px_3px_0px_rgba(0,0,0,1)]"
+                      aria-label="Toggle mute"
+                    >
+                      <svg id="mute-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" clip-rule="evenodd"/>
+                        <path id="mute-slash" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"/>
+                      </svg>
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
             </div>
           </div>
           
@@ -118,24 +121,7 @@ const { title, subtitle, ctaText, ctaLink, backgroundImage } = Astro.props;
             </div>
           </div>
           
-          <div class="relative animate-float-card-small animation-delay-1200">
-            <!-- Background shape for second floating card -->
-            <div class="hidden lg:block absolute -inset-4 bg-gradient-to-br from-orange-100/30 to-green-100/20 rounded-[2rem] transform -rotate-3 animate-rotate-gentle"></div>
-            
-            <div class="absolute -bottom-3 -left-3 lg:bottom-60 lg:-left-6 bg-white/95 backdrop-blur-sm rounded-xl lg:rounded-2xl p-2 lg:p-4 shadow-lg border border-gray-200 transform -rotate-3 lg:-rotate-6 hover:rotate-0 hover:scale-110 transition-all duration-500">
-              <div class="flex items-center space-x-1 lg:space-x-2">
-                <div class="w-6 h-6 lg:w-8 lg:h-8 bg-gradient-to-br from-orange-100 to-orange-200 rounded-md lg:rounded-lg flex items-center justify-center">
-                  <svg class="w-3 h-3 lg:w-4 lg:h-4 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <div class="hidden sm:block">
-                  <div class="text-xs font-semibold text-black">Confidence</div>
-                  <div class="text-xs text-gray-600">Achieve</div>
-                </div>
-              </div>
-            </div>
-          </div>
+   
           
           <!-- Enhanced decorative geometric shape - Mobile optimized -->
           <div class="hidden lg:block absolute top-1/2 right-0 transform translate-x-8 animate-float-geometric">
@@ -144,8 +130,7 @@ const { title, subtitle, ctaText, ctaLink, backgroundImage } = Astro.props;
         </div>
       </div>
     </div>
-  </div>
-  
+
   <!-- Enhanced Scroll Indicator -->
   <div class="absolute bottom-20 left-1/2 transform -translate-x-1/2 animate-bounce-gentle">
     <div class="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center hero-scroll-animate">
@@ -319,6 +304,289 @@ const { title, subtitle, ctaText, ctaLink, backgroundImage } = Astro.props;
       transition-duration: 0.01ms !important;
     }
   }
+
+  /* 3D Elements Styling */
+  
+  /* Floating 3D Cubes */
+  .floating-cube {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    transform-style: preserve-3d;
+    animation: rotateCube 20s infinite linear;
+  }
+  
+  .cube-1 {
+    animation-duration: 15s;
+    animation-delay: 0s;
+  }
+  
+  .cube-2 {
+    animation-duration: 18s;
+    animation-delay: -5s;
+    width: 60px;
+    height: 60px;
+  }
+  
+  .cube-3 {
+    animation-duration: 22s;
+    animation-delay: -10s;
+    width: 70px;
+    height: 70px;
+  }
+  
+  .cube-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 4px solid #000;
+    opacity: 0.8;
+  }
+  
+  .cube-front  { 
+    background: #86efac;
+    transform: rotateY(0deg) translateZ(40px); 
+  }
+  .cube-back   { 
+    background: #fb923c;
+    transform: rotateY(180deg) translateZ(40px); 
+  }
+  .cube-right  { 
+    background: #fde047;
+    transform: rotateY(90deg) translateZ(40px); 
+  }
+  .cube-left   { 
+    background: #67e8f9;
+    transform: rotateY(-90deg) translateZ(40px); 
+  }
+  .cube-top    { 
+    background: #c084fc;
+    transform: rotateX(90deg) translateZ(40px); 
+  }
+  .cube-bottom { 
+    background: #fb7185;
+    transform: rotateX(-90deg) translateZ(40px); 
+  }
+  
+  .cube-2 .cube-front,
+  .cube-2 .cube-back,
+  .cube-2 .cube-right,
+  .cube-2 .cube-left,
+  .cube-2 .cube-top,
+  .cube-2 .cube-bottom {
+    transform: rotateY(0deg) translateZ(30px);
+  }
+  
+  .cube-2 .cube-back { transform: rotateY(180deg) translateZ(30px); }
+  .cube-2 .cube-right { transform: rotateY(90deg) translateZ(30px); }
+  .cube-2 .cube-left { transform: rotateY(-90deg) translateZ(30px); }
+  .cube-2 .cube-top { transform: rotateX(90deg) translateZ(30px); }
+  .cube-2 .cube-bottom { transform: rotateX(-90deg) translateZ(30px); }
+  
+  .cube-3 .cube-front,
+  .cube-3 .cube-back,
+  .cube-3 .cube-right,
+  .cube-3 .cube-left,
+  .cube-3 .cube-top,
+  .cube-3 .cube-bottom {
+    transform: rotateY(0deg) translateZ(35px);
+  }
+  
+  .cube-3 .cube-back { transform: rotateY(180deg) translateZ(35px); }
+  .cube-3 .cube-right { transform: rotateY(90deg) translateZ(35px); }
+  .cube-3 .cube-left { transform: rotateY(-90deg) translateZ(35px); }
+  .cube-3 .cube-top { transform: rotateX(90deg) translateZ(35px); }
+  .cube-3 .cube-bottom { transform: rotateX(-90deg) translateZ(35px); }
+  
+  @keyframes rotateCube {
+    0% { transform: rotateX(0deg) rotateY(0deg) translateY(0px); }
+    25% { transform: rotateX(90deg) rotateY(90deg) translateY(-20px); }
+    50% { transform: rotateX(180deg) rotateY(180deg) translateY(0px); }
+    75% { transform: rotateX(270deg) rotateY(270deg) translateY(-20px); }
+    100% { transform: rotateX(360deg) rotateY(360deg) translateY(0px); }
+  }
+  
+  /* Floating Spheres */
+  .floating-sphere {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid #000;
+    box-shadow: 8px 8px 0px rgba(0,0,0,1);
+    animation: floatSphere 8s ease-in-out infinite;
+  }
+  
+  .sphere-1 {
+    background: linear-gradient(135deg, #fde047 0%, #fb923c 100%);
+    animation-delay: 0s;
+  }
+  
+  .sphere-2 {
+    background: linear-gradient(135deg, #86efac 0%, #67e8f9 100%);
+    animation-delay: -4s;
+    width: 80px;
+    height: 80px;
+  }
+  
+  @keyframes floatSphere {
+    0%, 100% { 
+      transform: translateY(0px) translateX(0px) scale(1);
+    }
+    25% { 
+      transform: translateY(-30px) translateX(15px) scale(1.1);
+    }
+    50% { 
+      transform: translateY(-10px) translateX(-15px) scale(0.95);
+    }
+    75% { 
+      transform: translateY(-25px) translateX(10px) scale(1.05);
+    }
+  }
+  
+  /* Floating Rings */
+  .floating-ring {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border: 6px solid #000;
+    border-radius: 50%;
+    background: transparent;
+    animation: rotateRing 12s linear infinite;
+  }
+  
+  .ring-1 {
+    border-color: #fb923c;
+    box-shadow: 6px 6px 0px rgba(0,0,0,0.3);
+  }
+  
+  .ring-2 {
+    border-color: #86efac;
+    box-shadow: 6px 6px 0px rgba(0,0,0,0.3);
+    width: 90px;
+    height: 90px;
+    animation-duration: 15s;
+    animation-direction: reverse;
+  }
+  
+  .ring-1::before,
+  .ring-2::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    border: 4px solid currentColor;
+    border-radius: 50%;
+    opacity: 0.5;
+  }
+  
+  @keyframes rotateRing {
+    0% { 
+      transform: rotate(0deg) translateY(0px);
+      opacity: 0.6;
+    }
+    50% { 
+      transform: rotate(180deg) translateY(-15px);
+      opacity: 0.8;
+    }
+    100% { 
+      transform: rotate(360deg) translateY(0px);
+      opacity: 0.6;
+    }
+  }
+  
+  /* Floating Question Marks */
+  .floating-question {
+    position: absolute;
+    font-size: 80px;
+    font-weight: 900;
+    color: #fb923c;
+    text-shadow: 
+      4px 4px 0px #000,
+      8px 8px 0px rgba(0,0,0,0.2);
+    animation: floatQuestion 6s ease-in-out infinite;
+    opacity: 0.3;
+    transform-origin: center;
+  }
+  
+  .q-1 {
+    animation-delay: 0s;
+  }
+  
+  .q-2 {
+    animation-delay: -3s;
+    font-size: 60px;
+    color: #86efac;
+  }
+  
+  @keyframes floatQuestion {
+    0%, 100% { 
+      transform: translateY(0px) rotate(0deg) scale(1);
+      opacity: 0.2;
+    }
+    25% { 
+      transform: translateY(-20px) rotate(5deg) scale(1.1);
+      opacity: 0.4;
+    }
+    50% { 
+      transform: translateY(-35px) rotate(-5deg) scale(1.15);
+      opacity: 0.3;
+    }
+    75% { 
+      transform: translateY(-15px) rotate(3deg) scale(1.05);
+      opacity: 0.35;
+    }
+  }
+  
+  /* Mobile Optimizations */
+  @media (max-width: 768px) {
+    .floating-cube {
+      width: 50px;
+      height: 50px;
+    }
+    
+    .cube-front, .cube-back, .cube-right, 
+    .cube-left, .cube-top, .cube-bottom {
+      transform: rotateY(0deg) translateZ(25px);
+    }
+    
+    .cube-back { transform: rotateY(180deg) translateZ(25px); }
+    .cube-right { transform: rotateY(90deg) translateZ(25px); }
+    .cube-left { transform: rotateY(-90deg) translateZ(25px); }
+    .cube-top { transform: rotateX(90deg) translateZ(25px); }
+    .cube-bottom { transform: rotateX(-90deg) translateZ(25px); }
+    
+    .floating-sphere {
+      width: 60px;
+      height: 60px;
+    }
+    
+    .floating-ring {
+      width: 70px;
+      height: 70px;
+    }
+    
+    .floating-question {
+      font-size: 50px;
+    }
+    
+    .q-2 {
+      font-size: 40px;
+    }
+  }
+  
+  /* Hide 3D elements on very small screens to reduce clutter */
+  @media (max-width: 480px) {
+    .cube-3,
+    .sphere-2,
+    .ring-2,
+    .q-2 {
+      display: none;
+    }
+  }
 </style>
 
 <script>
@@ -327,6 +595,7 @@ const { title, subtitle, ctaText, ctaLink, backgroundImage } = Astro.props;
     const muteToggle = document.getElementById('mute-toggle');
     const muteIcon = document.getElementById('mute-icon');
     const muteSlash = document.getElementById('mute-slash');
+    const heroSection = document.querySelector('section.hero-section');
     
     if (video && muteToggle && muteIcon && muteSlash) {
       // Update icon based on current mute state
@@ -343,9 +612,36 @@ const { title, subtitle, ctaText, ctaLink, backgroundImage } = Astro.props;
       
       // Toggle mute on button click
       muteToggle.addEventListener('click', function() {
-        video.muted = !video.muted;
+        if (video.muted) {
+          // Unmute and ensure playback resumes with sound (required on iOS/Safari)
+          video.muted = false;
+          const playPromise = video.play();
+          if (playPromise && typeof playPromise.then === 'function') {
+            playPromise.catch(() => {
+              // Silently ignore autoplay restrictions; user gesture triggered this
+            });
+          }
+        } else {
+          // Mute video
+          video.muted = true;
+        }
         updateMuteIcon();
       });
+
+      // Auto-mute when the hero section leaves the viewport (e.g., scrolling down)
+      if (heroSection && 'IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            const mostlyOutOfView = entry.intersectionRatio < 0.5 || !entry.isIntersecting;
+            if (mostlyOutOfView) {
+              video.muted = true;
+              updateMuteIcon();
+            }
+          });
+        }, { threshold: [0, 0.5] });
+
+        observer.observe(heroSection);
+      }
     }
   });
 </script>

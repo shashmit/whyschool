@@ -11,6 +11,7 @@ export interface Props {
 }
 
 const { title, description = "WhySchool - Bringing Real-World Clarity to Students Early", currentPath = "/" } = Astro.props;
+const showNavigation = currentPath === "/";
 ---
 
 <!DOCTYPE html>
@@ -42,7 +43,7 @@ const { title, description = "WhySchool - Bringing Real-World Clarity to Student
   </head>
   <body class="font-inter bg-stone-50 text-gray-900">
     <div class="min-h-screen flex flex-col">
-      <Navigation />
+      {showNavigation && <Navigation />}
 
       <main class="flex-1">
         <slot />
