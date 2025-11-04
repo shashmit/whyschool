@@ -102,7 +102,7 @@ const { title, subtitle, ctaLink, backgroundImage } = Astro.props;
           </div>
           
           <!-- Enhanced smaller floating cards - Mobile optimized -->
-          <div class="relative animate-float-card-small animation-delay-1000">
+          <div class="relative animate-float-card-small animation-delay-1000 hidden md:block">
             <!-- Background shape for first floating card -->
             <div class="hidden lg:block absolute -inset-4 bg-gradient-to-br from-orange-100/30 to-green-100/20 rounded-[2rem] transform rotate-6 animate-rotate-gentle"></div>
             
@@ -132,7 +132,7 @@ const { title, subtitle, ctaLink, backgroundImage } = Astro.props;
     </div>
 
   <!-- Enhanced Scroll Indicator -->
-  <div class="absolute bottom-20 left-1/2 transform -translate-x-1/2 animate-bounce-gentle">
+  <div class="absolute bottom-20 left-1/2 transform -translate-x-1/2 animate-bounce-gentle hidden md:block">
     <div class="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center hero-scroll-animate">
       <div class="w-1 h-3 bg-green-500 rounded-full mt-2 animate-scroll-indicator"></div>
     </div>
