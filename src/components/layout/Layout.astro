@@ -42,7 +42,7 @@ const showNavigation = currentPath === "/";
     <link rel="stylesheet" href="/src/styles/scrollFade.css">
   </head>
   <body class="font-inter bg-stone-50 text-gray-900">
-    <div class="min-h-screen flex flex-col">
+    <div class="min-h-screen flex flex-col overflow-y-hidden overflow-x-hidden">
       {showNavigation && <Navigation />}
 
       <main class="flex-1">
