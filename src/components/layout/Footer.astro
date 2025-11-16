@@ -48,48 +48,44 @@
 ---
 
 <footer class="bg-slate-50 text-gray-900">
-
-  <!-- Main Footer Section -->
-  <div class="bg-gray-900 text-white relative overflow-hidden">
-    <!-- Background Pattern -->
-    <div class="absolute inset-0 opacity-5">
-      <div class="absolute top-10 left-10 w-32 h-32 border border-white/20 rounded-full"></div>
-      <div class="absolute bottom-20 right-20 w-24 h-24 border border-white/20 rounded-full"></div>
-      <div class="absolute top-1/2 left-1/4 w-16 h-16 border border-white/20 rounded-full"></div>
-    </div>
-
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <!-- Social Media Section -->
-  
-
-      <!-- Large Brand Name -->
-      <div class="text-center mb-12">
-        <div class="flex items-baseline justify-center">
-          <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-gray-700 opacity-60 select-none">
-            WhyS
-          </h1>
-            <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-orange-400 opacity-80 select-none transform scale-x-[-1] translate-y-4 md:translate-y-10">
-          ?
-        </h1>
-          <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-gray-700 opacity-60 select-none">
-            hool
-          </h1>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="neo-footer relative">
+      <div class="px-6 sm:px-8 py-10">
+        <div class="flex items-center justify-center mb-10">
+          <div class="neo-card flex items-baseline gap-0  px-4 py-2">
+            <span class="text-5xl sm:text-6xl md:text-7xl font-extrabold text-black select-none">WhyS</span>
+            <span class="text-5xl sm:text-6xl md:text-7xl font-extrabold text-orange-500 select-none transform scale-x-[-1] translate-y-3 md:translate-y-5">?</span>
+            <span class="text-5xl sm:text-6xl md:text-7xl font-extrabold text-black select-none">hool</span>
+          </div>
         </div>
-      </div>
 
-       <div class="text-center">
-        <p class="text-lg mb-8 text-gray-200">
-          Move from curiosity → clarity → confidence — 
-          not through theory, but through <strong class="text-orange-400">experience</strong>.
-        </p>
-      </div>
+        <div class="text-center mb-8">
+          <p class="text-lg text-gray-700">
+            Move from curiosity → clarity → confidence — not through theory, but through <strong class="text-orange-500">experience</strong>.
+          </p>
+        </div>
 
-      <!-- Copyright -->
-      <div class="text-center">
-        <p class="text-gray-400 text-sm">
-          © 2025 WhySchool. All Rights Reserved
-        </p>
+
+    
+
+        <div class="text-center mb-2">
+          <p class="text-gray-700 text-sm">Contact us at <a href="mailto:contact@whyschool.academy" class="text-orange-600 hover:text-orange-500 font-semibold">contact@whyschool.academy</a></p>
+        </div>
+
+        <div class="text-center">
+          <p class="text-gray-600 text-sm">© 2025 WhySchool. All Rights Reserved</p>
+        </div>
       </div>
     </div>
   </div>
 </footer>
+
+<style>
+  :root { --neo-shadow: #0f172a; --neo-black: #111; --neo-accent: #ff6b8a; --neo-light: #ffe3ec; }
+  .neo-footer { border: 3px solid var(--neo-black); border-radius: 18px; box-shadow: 10px 10px 0 var(--neo-shadow); background: #fff; }
+  .neo-tab { display: inline-block; padding: 10px 16px; border: 2px solid var(--neo-black); border-radius: 12px; background: #fff; box-shadow: 4px 4px 0 var(--neo-shadow); font-weight: 800; color: #111; }
+  .neo-tab:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--neo-shadow); }
+  .neo-chip { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border: 2px solid var(--neo-black); border-radius: 10px; box-shadow: 4px 4px 0 var(--neo-shadow); color: #111; background: linear-gradient(180deg, #fff, var(--neo-light)); }
+  .neo-chip:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--neo-shadow); }
+  @media (prefers-reduced-motion: reduce) { .neo-card, .neo-tab, .neo-chip { transition: none; } }
+</style>

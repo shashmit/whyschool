@@ -2,10 +2,10 @@
 <header id="floating-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out opacity-0 translate-y-[-100%] pointer-events-none">
   <div class="mx-4 sm:mx-6 lg:mx-8 mt-4">
     <div class="max-w-4xl mx-auto">
-      <nav class="bg-white/90 backdrop-blur-md shadow-2xl border border-gray-200 rounded-full px-6 py-3">
+      <nav class="neo bg-white/90 backdrop-blur-md rounded-2xl px-6 py-3">
         <div class="flex justify-between items-center">
           <div class="flex items-center">
-            <a href="/" class="flex items-baseline hover:text-green-600 transition-colors duration-200">
+            <a href="/" class="neo-brand flex items-baseline transition-colors duration-200">
               <span class="text-lg sm:text-xl font-bold text-black select-none">WhyS</span>
               <span class="text-lg sm:text-xl font-bold text-orange-600 select-none transform scale-x-[-1] translate-y-1">?</span>
               <span class="text-lg sm:text-xl font-bold text-black select-none">hool</span>
@@ -14,12 +14,14 @@
           
           <!-- Desktop Navigation -->
           <div class="hidden md:flex items-center space-x-8">
-
+            <div class="flex items-center gap-3">
+              <a href="/curriculum" class="neo-tab">Curriculum</a>
+            </div>
           </div>
           
           <!-- Mobile Menu Button -->
           <div class="md:hidden">
-            <button type="button" class="text-gray-700 hover:text-green-600 focus:outline-none focus:text-green-600 transition-colors duration-200" id="mobile-menu-button">
+            <button type="button" class="neo-btn light px-3 py-2" id="mobile-menu-button">
               <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
@@ -28,8 +30,10 @@
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-gray-200/50">
-         
+        <div id="mobile-menu" class="hidden md:hidden mt-4 pt-4">
+          <div class="grid grid-cols-1 gap-3">
+            <a href="/curriculum" class="neo-btn light full-width text-center py-4">Curriculum</a>
+          </div>
         </div>
       </nav>
     </div>
@@ -121,65 +125,21 @@
 </script>
 
 <style>
-  /* Enhanced glassmorphism effect */
-  #floating-header nav {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    box-shadow: 
-      0 8px 32px rgba(0, 0, 0, 0.1),
-      0 0 0 1px rgba(0, 0, 0, 0.05);
-  }
-  
-  /* Smooth transitions for all interactive elements */
-  #floating-header a,
-  #floating-header button {
-    transition: all 0.2s ease-out;
-  }
-  
-  /* Enhanced hover effects */
-  #floating-header nav:hover {
-    box-shadow: 
-      0 12px 40px rgba(0, 0, 0, 0.15),
-      0 0 0 1px rgba(0, 0, 0, 0.08);
-  }
-  
-  /* Mobile menu animations */
-  #mobile-menu {
-    animation: slideDown 0.3s ease-out;
-  }
-  
-  @keyframes slideDown {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    #floating-header .mx-4 {
-      margin-left: 1rem;
-      margin-right: 1rem;
-    }
-    
-    #floating-header nav {
-      padding: 0.75rem 1rem;
-    }
-  }
-  
-  /* Reduced motion support */
-  @media (prefers-reduced-motion: reduce) {
-    #floating-header {
-      transition: none;
-    }
-    
-    #mobile-menu {
-      animation: none;
-    }
-  }
+  :root { --neo-shadow: #0f172a; --neo-black: #111; --neo-accent: #ff6b8a; --neo-light: #ffe3ec; }
+  #floating-header nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05); }
+  #floating-header a, #floating-header button { transition: all 0.2s ease-out; }
+  #floating-header nav:hover { box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.08); }
+  #mobile-menu { animation: slideDown 0.3s ease-out; }
+  @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 768px) { #floating-header .mx-4 { margin-left: 1rem; margin-right: 1rem; } #floating-header nav { padding: 0.75rem 1rem; } }
+  @media (prefers-reduced-motion: reduce) { #floating-header { transition: none; } #mobile-menu { animation: none; } }
+
+  #floating-header nav.neo { border: 3px solid var(--neo-black); box-shadow: 8px 8px 0 var(--neo-shadow); background: #fff; }
+  #floating-header .neo-tab { display: inline-block; padding: 8px 14px; border: 2px solid var(--neo-black); border-radius: 12px; background: #fff; box-shadow: 4px 4px 0 var(--neo-shadow); font-weight: 700; color: #111; }
+  #floating-header .neo-tab:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--neo-shadow); }
+  #floating-header .neo-btn { display: inline-block; padding: 10px 16px; border: 2px solid var(--neo-black); border-radius: 12px; box-shadow: 4px 4px 0 var(--neo-shadow); font-weight: 800; }
+  #floating-header .neo-btn.light { background: linear-gradient(180deg, #fff, var(--neo-light)); color: #111; }
+  #floating-header .neo-btn.accent { background: linear-gradient(180deg, #ffd1db, var(--neo-accent)); color: #111; }
+  #floating-header .neo-btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--neo-shadow); }
+  #floating-header .neo-btn.full-width { display: block; width: 100%; }
 </style>

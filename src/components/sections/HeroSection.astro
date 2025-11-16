@@ -21,7 +21,7 @@ const { title, subtitle, ctaLink, backgroundImage } = Astro.props;
         <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-gray-900 select-none">
           WhyS
         </h1>
-          <h1 class="text-6xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-orange-400 opacity-80 select-none scale-x-[-1] transform translate-y-4 md:translate-y-5">
+          <h1 class="text-6xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-orange-500 select-none scale-x-[-1] transform translate-y-4 md:translate-y-5">
             ?
           </h1>
         <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-gray-900 select-none">
@@ -52,7 +52,7 @@ const { title, subtitle, ctaLink, backgroundImage } = Astro.props;
           <div class="relative">
             
             <!-- Main content card with enhanced interactions - Mobile optimized -->
-            <div class="relative bg-white rounded-3xl p-4 sm:p-6 lg:p-8 border-4 border-gray-900 shadow-[8px_8px_0px_rgba(0,0,0,1)] transform hover:shadow-[12px_12px_0px_rgba(0,0,0,1)] transition-all duration-300">
+             <div class="relative bg-white rounded-3xl p-4 sm:p-6 lg:p-8 border-4 border-gray-900 shadow-[8px_8px_0px_rgba(0,0,0,1)] transform hover:shadow-[12px_12px_0px_rgba(0,0,0,1)] transition-all duration-300">
               <div class="grid lg:grid-cols-2 gap-6 lg:gap-8 items-center">
                 <!-- Left: Title, subtitle, CTA, progress -->
                 <div class="order-2 lg:order-1">
@@ -63,7 +63,7 @@ const { title, subtitle, ctaLink, backgroundImage } = Astro.props;
                     {subtitle}
                   </p>
                   <div class="flex items-center gap-4 mb-6">
-                    <a href="/curriculum" class="inline-block bg-yellow-300 hover:bg-yellow-400 border-4 border-gray-900 text-gray-900 font-black px-5 py-3 rounded-full shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all duration-200">
+                    <a href="/curriculum" class="cta-btn inline-block bg-yellow-300 hover:bg-yellow-400 border-4 border-gray-900 text-gray-900 font-black px-5 py-3 rounded-full shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all duration-200">
                       Explore Curriculum
                     </a>
                   </div>
@@ -131,12 +131,7 @@ const { title, subtitle, ctaLink, backgroundImage } = Astro.props;
       </div>
     </div>
 
-  <!-- Enhanced Scroll Indicator -->
-  <div class="absolute bottom-20 left-1/2 transform -translate-x-1/2 animate-bounce-gentle hidden md:block">
-    <div class="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center hero-scroll-animate">
-      <div class="w-1 h-3 bg-green-500 rounded-full mt-2 animate-scroll-indicator"></div>
-    </div>
-  </div>
+
 </section>
 
 <style>
@@ -587,6 +582,15 @@ const { title, subtitle, ctaLink, backgroundImage } = Astro.props;
       display: none;
     }
   }
+  
+  .cta-btn { position: relative; overflow: hidden; will-change: transform, box-shadow; animation: ctaPulse 3.5s ease-in-out infinite; }
+  .cta-btn:hover { transform: translate(-2px, -2px) rotate(-0.5deg); box-shadow: 6px 6px 0 rgba(0,0,0,1); }
+  .cta-btn:active { transform: translate(0,0) scale(0.98); box-shadow: 2px 2px 0 rgba(0,0,0,1); }
+  .cta-btn::after { content:""; position:absolute; left:50%; top:50%; width:0; height:0; background: rgba(255,255,255,0.6); border-radius:9999px; transform: translate(-50%,-50%); pointer-events:none; }
+  .cta-btn:active::after { animation: ctaRipple 600ms ease-out; }
+  @keyframes ctaPulse { 0%, 100% { transform: translate(0,0); box-shadow: 4px 4px 0 rgba(0,0,0,1); } 50% { transform: translate(-1px,-1px); box-shadow: 5px 5px 0 rgba(0,0,0,1); } }
+  @keyframes ctaRipple { 0% { width:0; height:0; opacity:0.6; } 100% { width:300%; height:300%; opacity:0; } }
+  @media (prefers-reduced-motion: reduce) { .cta-btn { animation: none; } }
 </style>
 
 <script>
