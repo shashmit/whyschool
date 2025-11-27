@@ -36,12 +36,13 @@ const showNavigation = currentPath === "/";
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Scroll Fade Animation Styles -->
+    <!-- Styles -->
     <link rel="stylesheet" href="/src/styles/scrollFade.css">
+    <link rel="stylesheet" href="/src/styles/brutalist.css">
   </head>
-  <body class="font-inter bg-stone-50 text-gray-900">
+  <body class="font-mono bg-neo-white text-neo-black selection:bg-neo-pink selection:text-white">
     <div class="min-h-screen flex flex-col overflow-y-hidden overflow-x-hidden">
       {showNavigation && <Navigation />}
 
@@ -60,7 +61,5 @@ const showNavigation = currentPath === "/";
 </html>
 
 <style>
-  .font-inter {
-    font-family: 'Inter', sans-serif;
-  }
+  /* Removed local font-inter style as it's handled globally now */
 </style>

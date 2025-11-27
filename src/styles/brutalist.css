@@ -1,0 +1,86 @@
+/* Neo-Brutalist Global Styles */
+
+:root {
+    --neo-border-width: 3px;
+    --neo-shadow-offset: 4px;
+}
+
+/* Reset for brutalist feel */
+* {
+    border-radius: 0 !important; /* Force sharp corners */
+}
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: "Courier Prime", monospace;
+}
+
+/* Utility classes */
+.neo-box {
+    border: var(--neo-border-width) solid #000000;
+    box-shadow: var(--neo-shadow-offset) var(--neo-shadow-offset) 0px 0px
+        #000000;
+    background-color: #ffffff;
+    transition: all 0.2s ease-in-out;
+}
+
+.neo-box:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: calc(var(--neo-shadow-offset) + 2px)
+        calc(var(--neo-shadow-offset) + 2px) 0px 0px #000000;
+}
+
+.neo-box:active {
+    transform: translate(0, 0);
+    box-shadow: 0px 0px 0px 0px #000000;
+}
+
+.neo-button {
+    @apply neo-box px-6 py-3 font-bold text-lg uppercase tracking-wider
+        cursor-pointer;
+}
+
+.neo-button-primary {
+    @apply neo-button bg-neo-yellow hover:bg-neo-pink;
+}
+
+.neo-button-secondary {
+    @apply neo-button bg-neo-cyan hover:bg-neo-green;
+}
+
+.neo-input {
+    @apply neo-box w-full p-3 font-mono text-lg outline-none focus:ring-0;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+}
+
+h1 {
+    font-size: 4rem;
+    line-height: 1;
+    text-shadow: 2px 2px 0px #000000;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ffffff;
+    border-left: 3px solid #000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #000000;
+    border: 3px solid #ffffff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff00ff;
+}
