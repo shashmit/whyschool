@@ -12,7 +12,7 @@ const { title, subtitle, ctaLink, backgroundImage } = Astro.props;
 <section class="relative overflow-hidden min-h-screen flex items-center pt-8 bg-neo-white" data-scroll-fade>
   <!-- Brutalist Background Elements -->
   <div class="absolute inset-0 pointer-events-none overflow-hidden">
-    <div class="absolute top-20 left-10 w-32 h-32 bg-neo-yellow border-3 border-black shadow-neo-lg animate-float-slow"></div>
+  
     <div class="absolute bottom-40 right-20 w-48 h-48 bg-neo-pink border-3 border-black rounded-full shadow-neo-xl animate-bounce-slow"></div>
     <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border-3 border-black opacity-5 rounded-full animate-spin-slow"></div>
   </div>
@@ -48,7 +48,7 @@ const { title, subtitle, ctaLink, backgroundImage } = Astro.props;
       
       <!-- Main Content Box -->
       <div class="w-full max-w-6xl mx-auto">
-        <div class="neo-box bg-white p-6 sm:p-10 transform hover:-translate-y-2 hover:shadow-neo-xl transition-all duration-300">
+        <div class="neo-box bg-white p-6 sm:p-10 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform hover:-translate-y-2 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-all duration-300">
           <div class="grid lg:grid-cols-2 gap-10 items-center">
             <!-- Left: Content -->
             <div class="order-2 lg:order-1">
@@ -122,18 +122,18 @@ const { title, subtitle, ctaLink, backgroundImage } = Astro.props;
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    const video = document.getElementById('hero-video');
+    const video = document.getElementById('hero-video') as HTMLVideoElement | null;
     const muteToggle = document.getElementById('mute-toggle');
     const muteSlash = document.getElementById('mute-slash');
     
     if (video && muteToggle && muteSlash) {
-      function updateMuteIcon() {
+      const updateMuteIcon = () => {
         if (video.muted) {
           muteSlash.style.display = 'block';
         } else {
           muteSlash.style.display = 'none';
         }
-      }
+      };
       
       updateMuteIcon();
       
